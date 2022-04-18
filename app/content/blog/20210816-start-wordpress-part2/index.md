@@ -9,7 +9,7 @@ description: "EC2とDockerで独自ドメインのwordpressブログを公開す
 * part2
     * part1で作成したEC2にDocker, docker-composeをインストール
     * docker-comopseでwordpress & MySQLを構築
-* part3
+* [part3](../20210817-start-wordpress-part3)
     * 独自ドメイン取得
     * Route53でDNS設定
     * Certificate Managerで証明書作成
