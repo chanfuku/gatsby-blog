@@ -1,10 +1,10 @@
 ---
-title: 【OpenApi】 ymlをうまいこと使って開発効率 & 品質アップ
+title: 【OpenApi】 ymlを使って開発効率 & 品質アップ
 date: "2022-04-10T22:12:03.284Z"
-description: "【OpenApi】 ymlをうまいこと使って開発効率 & 品質アップ"
+description: "【OpenApi】 ymlを使って開発効率 & 品質アップ"
 ---
 
-業務の備忘録。「ymlをうまいこと使って」の「うまいことってなんぞや？」と言うと、いくつかのライブラリを使うと、apiを定義したymlファイルをベースに、
+業務の備忘録。いくつかのライブラリを使うと、apiを定義したymlファイルをベースに、
 
 * Typescriptの型を自動生成
 * APIのclientコードを自動生成
@@ -20,7 +20,7 @@ description: "【OpenApi】 ymlをうまいこと使って開発効率 & 品質�
 では、どんなライブラリを使ったのかというと、
 
 ### フロント
-openapitools/openapi-generator-cli
+- **openapitools/openapi-generator-cli**
 
 ↑APIクライアントを生成するために使ったライブラリです。JVMが必要なのが少し手間ですが、以下のDockerfileの様にnodeのimageにopenjdk8をインストールすればOKです。
 
@@ -42,11 +42,11 @@ public async register (petNew: ApiClient.PetNew) {
 
 ### API
 
-express-openapi
+- **express-openapi**
 
 express-openapiは前々回投稿したものと同じです。このライブラリにymlを読み込ませると、フォルダ名・ファイル名・関数名の組み合わせでroutingを表現することが出来るので、routing定義を書かなくて済むようになります。
 
-openapi-typescript-code-generator
+- **openapi-typescript-code-generator**
 
 openapi-typescript-code-generatorはapi.ymlからtypescriptの型を生成してくれるので、RequestやResponseの型を縛ることができます。
 

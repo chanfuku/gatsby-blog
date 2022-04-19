@@ -3,17 +3,17 @@ gatsby-blog
 
 ## 1. set up
 ```
-$ ./bin/bootstrap.sh
+./bin/bootstrap.sh
 ```
 
 ## 2. install modules
 ```
-$ docker-compose exec gatsby npm install
+docker-compose exec gatsby npm install
 ```
 
 ## 3. start server
 ```
-$ docker-compose exec gatsby npm run develop
+docker-compose exec gatsby npm run develop
 .
 .
 .
