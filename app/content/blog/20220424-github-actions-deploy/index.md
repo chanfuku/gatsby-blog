@@ -55,7 +55,7 @@ AWS_SECRET_ACCESS_KEY: Secret Access Keyの値
 .github/workflows/github-actions.ymlを作成し、jobを定義する
 
 ```yaml
-name: Build Nuxt SPA on S3
+name: Build Nuxt SPA on S3 and Cache Invalidation on CloudFront
 on:
   push:
       branches:
