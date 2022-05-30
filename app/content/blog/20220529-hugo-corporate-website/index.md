@@ -7,7 +7,7 @@ description: "【Hugo】コーポレートサイトをNetlifyで公開した"
 Hugoを使ってコーポーレートサイト実装して欲しいとの依頼を頂いたので、Netlifyで公開するところまでやってみました。
 
 ## Hugo
-https://gohugo.io/
+<a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a>
 
 テーマ(テンプレート)は↓を使いました。
 
