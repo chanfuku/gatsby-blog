@@ -9,6 +9,11 @@ Hugoを使ってコーポーレートサイト実装して欲しいとの依頼�
 ## Hugo
 https://gohugo.io/
 
+Hugoは比較的簡単に静的サイトを作成出来るフレームワークの一種です。Static Site Generator(SSG)と呼ばれています。
+
+SSGは他にはNext.js, Nuxt.js, Gatsby.js等があります。ちなみに、このブログはGatsby.js製です。
+
+## theme
 テーマ(テンプレート)は↓を使いました。
 
 https://themes.gohugo.io/themes/doks/
@@ -25,6 +30,7 @@ https://docs.netlify.com/forms/setup/
 
 ## HugoのTutorial動画
 https://www.youtube.com/watch?v=qtIqKaDlqXo
+
 2017年とかの動画なので、手順通り進めても所々動かないのが辛いですが、動画のコメント欄に解決方法が載っています。
 
 ## Netlify
@@ -33,4 +39,4 @@ https://www.netlify.com/
 
 ## Docker
 公式のDocker Imageが提供されていないので、Docker環境を構築するなら自前で頑張る必要があります...。
-公式サイトの手順通りMacのbrewを使って構築しました。
+Dockerは諦めて、公式サイトの手順通りMacのbrewを使ってローカル環境を構築しました。
