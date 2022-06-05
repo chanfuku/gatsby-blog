@@ -15,7 +15,7 @@ Vuex Storeをいい感じにmodule化してくれる + TypeScriptでスマート
 https://www.npmjs.com/package/vuex-module-decorators
 
 `front/store/Pet.ts`
-```
+```typescript
 import * as ApiClient from '~/api-client'
 import { apiClientWrapper } from '~/utils/api'
 import { Module, VuexModule, Action, Mutation } from 'vuex-module-decorators'
@@ -48,7 +48,7 @@ export default class Pet extends VuexModule {
 上記Storeのテストを書いてみます。
 
 `front/test/Pet.spec.js`
-```
+```javascript
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import { initializeStores } from '~/store/index.ts';
@@ -82,7 +82,7 @@ describe('store/Pet.ts', () => {
 続いて、petStoreを利用しているコンポーネントのテストを書いてみます。
 
 `front/pages/index.vue`
-```
+```javascript
 <script lang="ts">
 import { computed, defineComponent, useFetch } from '@nuxtjs/composition-api'
 import { petStore } from '~/store'
@@ -106,7 +106,7 @@ export default defineComponent({
 
 `test/pages/index.spec.js`
 
-```
+```javascript
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import { initializeStores } from '~/store/index.ts';
