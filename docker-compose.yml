@@ -12,3 +12,5 @@ services:
     environment:
       - NODE_ENV=development
     stdin_open: true
+    command:
+      sh -c 'npm install && npm run develop'

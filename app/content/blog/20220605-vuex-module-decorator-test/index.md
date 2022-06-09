@@ -6,12 +6,14 @@ description: "【Nuxt】Vuex Module Decoratorで書かれたStoreをテストす
 
 
 
-[こちら](https://github.com/chanfuku/nuxt-openapi)のリポジトリのfrontに
+<a href="https://github.com/chanfuku/nuxt-openapi" target="_blank">こちら</a>のリポジトリのfrontに
+
 
 jestとvue-test-utilsをインストールして、Vux Module Decoratorsで書かれたStoreをテストしてみました。
 
 ### Vuex Module Decoratorsとは
 Vuex Storeをいい感じにmodule化してくれる + TypeScriptでスマートに書けるようになる、ライブラリです。
+
 https://www.npmjs.com/package/vuex-module-decorators
 
 `front/store/Pet.ts`
