@@ -6,10 +6,10 @@ description: "Gatsbyに移行しました"
 
 もともとはWordPress + AWSで運用していましたが、徐々にコストが気になるようになってきたのでGatsbyに移行しました。
 ### Gatsby
-https://www.gatsbyjs.com/
+<a href="https://www.gatsbyjs.com/" target="_blank">https://www.gatsbyjs.com/</a>
 
 ### Hosting
-https://www.gatsbyjs.com/products/cloud/
+<a href="https://www.gatsbyjs.com/products/cloud/" target="_blank">https://www.gatsbyjs.com/products/cloud/</a>
 
 ### Repository
-https://github.com/chanfuku/gatsby-blog
+<a href="https://github.com/chanfuku/gatsby-blog" target="_blank">https://github.com/chanfuku/gatsby-blog</a>

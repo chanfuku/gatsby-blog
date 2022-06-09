@@ -117,16 +117,15 @@ jobs:
 
 - GitHub公式が出しているActionsを活用する
     - node-versionを14に固定する
-        - [actions/setup-node](https://github.com/actions/setup-node)
+        - <a href="https://github.com/actions/setup-node" target="_blank">actions/setup-node</a>
     - ブランチcheckout
-        - [actions/checkout](https://github.com/actions/checkout)
+        - <a href="https://github.com/actions/checkout" target="_blank">actions/checkout</a>
     - ビルドした成果物(dist)を一つのjobから次のjobに受け渡す
-        - [actions/upload-artifact](https://github.com/actions/upload-artifact)
-        - [actions/download-artifact](https://github.com/actions/download-artifact)
+        - <a href="https://github.com/actions/upload-artifact" target="_blank">upload-artifact</a>
+        - <a href="https://github.com/actions/download-artifact" target="_blank">download-artifact</a>
 
 これでmainブランチにマージしたり、pushしたりすると自動でS3にデプロイされ、CloudFrontのキャッシュクリアが行われます。
 
 ![Image](./img2.png)
 
-GitHub公式が出しているActionsは他にも色々あるのでlintやテストを実行したりする場合にも使えそうです。
-[GitHub公式Actions](https://github.com/orgs/actions/repositories)
+以上です

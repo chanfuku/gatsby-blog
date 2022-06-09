@@ -7,7 +7,7 @@ description: "【Kubernetes】よく使うkubectlコマンド"
 Kubernetes初心者です。随時追加・整理していきます。
 
 ## Referrence 
-[kubectl Cheetsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+<a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/" target="_blank">kubectl Cheetsheet</a>
 
 ### display list of contexts
 ```
