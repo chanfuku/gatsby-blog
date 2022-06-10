@@ -8,7 +8,7 @@ description: "S3 + CloudFront + Route53 でNuxt.jsのSPAを配信する"
 
 先に完成したものをお見せします↓このブログのサブドメイン（nuxt-spa)で公開しました
 
-[https://nuxt-spa.ebato-tech-blog.tk/](https://nuxt-spa.ebato-tech-blog.tk/)
+<a href="https://nuxt-spa.ebato-tech-blog.tk/" target="_blank">https://nuxt-spa.ebato-tech-blog.tk/</a>
 
 それでは、手順を記載していきます。
 
@@ -60,13 +60,13 @@ description: "S3 + CloudFront + Route53 でNuxt.jsのSPAを配信する"
 
 ![Image](./img18.png)
 
-上記画像のドメイン名に表示されているが、CloudFrontが発行したドメイン名にhttpsでブラウザで表示してみます。今回は、「[https://d2g1b4immm849y.cloudfront.net/sample](https://d2g1b4immm849y.cloudfront.net/sample)」になります。先程S3にアップロードしたSPAが表示できればCloudFrontの設定は完了です。
+上記画像のドメイン名に表示されているが、CloudFrontが発行したドメイン名にhttpsでブラウザで表示してみます。今回は、「https://d2g1b4immm849y.cloudfront.net/sample」になります。先程S3にアップロードしたSPAが表示できればCloudFrontの設定は完了です。
 
 ## Route53でドメインを割り当てる
 
 ![Image](./img19.png)
 
-上記の赤枠の部分が今回割り当てたサブドメインの設定です。AとAAAAの違いはIPv4 or IPv6ということみたいです。レコード名にサブドメインを含めたドメイン名を設定し、値/トラフィックルーティング先にCloudFrontで発行したドメイン名を設定し、しばらく待つと「[https://nuxt-spa.ebato-tech-blog.tk/](https://nuxt-spa.ebato-tech-blog.tk/)」が表示れました↓
+上記の赤枠の部分が今回割り当てたサブドメインの設定です。AとAAAAの違いはIPv4 or IPv6ということみたいです。レコード名にサブドメインを含めたドメイン名を設定し、値/トラフィックルーティング先にCloudFrontで発行したドメイン名を設定し、しばらく待つと「https://nuxt-spa.ebato-tech-blog.tk/」が表示れました↓
 
 ![Image](./img20.png)
 

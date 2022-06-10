@@ -6,7 +6,7 @@ description: "【Laravel】インメモリSqliteを使ってDB周りのテスト
 
 業務で、インメモリSqliteを使ってローカル開発環境のDBが汚れることなくテストコードを実行できるようにしたので、その備忘録です。
 
-先日LaravelのDocker環境を構築した記事を作成しましたが、同じ[リポジトリ](https://github.com/chanfuku/docker-laravel-nginx-mysql)にテストコードをpushしました。
+先日LaravelのDocker環境を構築した記事を作成しましたが、同じ<a href="https://github.com/chanfuku/docker-laravel-nginx-mysql">リポジトリ</a>にテストコードをpushしました。
 
 ![Image](./img1.png)
 
@@ -22,7 +22,7 @@ description: "【Laravel】インメモリSqliteを使ってDB周りのテスト
 
 ### 1. notesテーブルにdeleted_atカラムを追加する
 
-コミットは[これ](https://github.com/chanfuku/docker-laravel-nginx-mysql/commit/e3f083a0bf652757cee067477c2baa8b87e476e5)です。ポイントは$table->softDeletes();の部分。これでマイグレーションコマンド実行すると、Timesamp型でdelete_atを追加してくれます。
+コミットは<a href="https://github.com/chanfuku/docker-laravel-nginx-mysql/commit/e3f083a0bf652757cee067477c2baa8b87e476e5" target="_blank">こちら</a>です。ポイントは$table->softDeletes();の部分。これでマイグレーションコマンド実行すると、Timesamp型でdelete_atを追加してくれます。
 
 ```php
     public function up()
@@ -42,11 +42,11 @@ $ cd /var/www/laravel && php artisan migrate
 
 ### 2. Noteクラスにソフトデリート（論理削除）の設定を記述する
 
-コミットは[これ](https://github.com/chanfuku/docker-laravel-nginx-mysql/commit/a41e51a3bbbd9076e434cf754ba05e42ed5ef38a)。
+コミットは<a href="https://github.com/chanfuku/docker-laravel-nginx-mysql/commit/a41e51a3bbbd9076e434cf754ba05e42ed5ef38a" target="_blank">こちら</a>
 
 ### 3. 「Noteモデルからデータの詳細や一覧を取得する際に、削除済のデータは自動的に除外してくれることを確認する。」ためのテストコードを書く。
 
-コミットは[これ](https://github.com/chanfuku/docker-laravel-nginx-mysql/commit/a41e51a3bbbd9076e434cf754ba05e42ed5ef38a)
+コミットは<a href="https://github.com/chanfuku/docker-laravel-nginx-mysql/commit/a41e51a3bbbd9076e434cf754ba05e42ed5ef38a" target="_blank">こちら</a>
 
 まず、database.phpに以下追記します。
 

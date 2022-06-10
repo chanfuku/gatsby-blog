@@ -27,7 +27,7 @@ description: "EC2とDockerで独自ドメインのwordpressブログを公開す
 
 公式ドキュメント通りにインストールする
 * Dockerインストール
-[https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
+<a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">https://docs.docker.com/engine/install/ubuntu/</a>
 
 ```bash
 $ sudo apt-get update
@@ -46,7 +46,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
 * docker-composeインストール
-[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+<a href="https://docs.docker.com/compose/install/" target="_blank">(https://docs.docker.com/compose/install/</a>
 
 ```bash
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose

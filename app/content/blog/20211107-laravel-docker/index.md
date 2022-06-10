@@ -8,7 +8,7 @@ description: "Laravelのdocker環境を作った"
 
 ### github
 
-https://github.com/chanfuku/docker-laravel-nginx-mysql
+<a href="https://github.com/chanfuku/docker-laravel-nginx-mysql" target="_blank">https://github.com/chanfuku/docker-laravel-nginx-mysql</a>
 
 ### 各種ミドルウェアやFWの詳細です。※2021/11/07時点
 ```

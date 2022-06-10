@@ -51,7 +51,7 @@ express-openapiは前々回投稿したものと同じです。このライブ�
 openapi-typescript-code-generatorはapi.ymlからtypescriptの型を生成してくれるので、RequestやResponseの型を縛ることができます。
 
 ### 成果物
-https://github.com/chanfuku/nuxt-openapi
+<a href="https://github.com/chanfuku/nuxt-openapi" target="_blank">https://github.com/chanfuku/nuxt-openapi</a>
 
 README通りにDockerで環境を起動すれば、http://localhostでCRUDの一連の流れが動作確認できる、はずです。
 

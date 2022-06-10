@@ -10,17 +10,17 @@ description: "Nuxt.js のUniversal(SSR)とSPAの挙動を比較してきづい�
 
 ### Universal
 * github
-https://github.com/chanfuku/docker_nuxt_ssr02
+<a href="https://github.com/chanfuku/docker_nuxt_ssr02" target="_blank">https://github.com/chanfuku/docker_nuxt_ssr02</a>
 
 * demo
-https://nuxt-ssr-ebato.herokuapp.com/
+<a href="https://nuxt-ssr-ebato.herokuapp.com/" target="_blank">https://nuxt-ssr-ebato.herokuapp.com/</a>
 
 ### SPA
 * github
-https://github.com/chanfuku/docker_nuxt_spa
+<a href="https://github.com/chanfuku/docker_nuxt_spa" target="_blank">https://github.com/chanfuku/docker_nuxt_spa</a>
 
 * demo
-https://nuxt-spa-ebato.herokuapp.com/
+<a href="https://nuxt-spa-ebato.herokuapp.com/" target="_blank">https://nuxt-spa-ebato.herokuapp.com/</a>
 
 
 ### Universalの場合、ServerとClient 両方のページ表示方法が存在する

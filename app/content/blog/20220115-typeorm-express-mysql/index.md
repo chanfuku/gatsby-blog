@@ -7,7 +7,7 @@ description: "【TypeORM, Express, Mysql】Docker環境を構築した"
 成果物↓
 
 ### github
-https://github.com/chanfuku/docker-typeorm-express
+[https://github.com/chanfuku/docker-typeorm-express]
 
 各種バージョン↓
 

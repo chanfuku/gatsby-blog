@@ -8,8 +8,7 @@ Reactの公式チュートリアルはさらっと読んだ上で、Next.js(Reac
 成果物↓
 
 ### github
-
-https://github.com/chanfuku/docker-nextjs-blog
+<a href="https://github.com/chanfuku/docker-nextjs-blog" target="_blank">https://github.com/chanfuku/docker-nextjs-blog</a>
 
 上記リポジトリでNext.jsのdocker環境も構築しました。以前構築した、nuxtのdocker環境がほぼそのまま使えました。変更点はyarnをnpmに変えたくらいです。
 
