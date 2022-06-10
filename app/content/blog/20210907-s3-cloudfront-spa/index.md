@@ -8,7 +8,7 @@ description: "S3 + CloudFront + Route53 でNuxt.jsのSPAを配信する"
 
 先に完成したものをお見せします↓このブログのサブドメイン（nuxt-spa)で公開しました
 
-<a href="https://nuxt-spa.ebato-tech-blog.tk/" target="_blank">https://nuxt-spa.ebato-tech-blog.tk/</a>
+<a href="https://nuxt-spa.ebato-tech-blog.tk/" target="_blank">`https://nuxt-spa.ebato-tech-blog.tk/`</a>
 
 それでは、手順を記載していきます。
 

@@ -7,7 +7,7 @@ description: "Figmaでプロトタイプを作成してみた"
 まずは成果物載せます。
 
 ### プロトタイプ
-<a href="https://www.figma.com/proto/PhylVYjozLhoO62fqqsY8g/%E3%83%96%E3%83%AD%E3%82%B0%E3%83%90%E3%83%8A%E3%83%BC?node-id=47%3A16&scaling=scale-down&page-id=2%3A2&starting-point-node-id=47%3A16" target="_blank">demo</a>
+<a href="https://www.figma.com/proto/PhylVYjozLhoO62fqqsY8g/%E3%83%96%E3%83%AD%E3%82%B0%E3%83%90%E3%83%8A%E3%83%BC?node-id=47%3A16&scaling=scale-down&page-id=2%3A2&starting-point-node-id=47%3A16" target="_blank">`demo`</a>
 
 表示されたページで、ボタンをクリックすると一覧画面や詳細画面に遷移したりという動きを確認することが出来ます。
 

@@ -6,7 +6,7 @@ description: "【Nuxt】Vuex Module Decoratorで書かれたStoreをテストす
 
 
 
-<a href="https://github.com/chanfuku/nuxt-openapi" target="_blank">こちら</a>のリポジトリのfrontに
+<a href="https://github.com/chanfuku/nuxt-openapi" target="_blank">`こちら`</a>のリポジトリのfrontに
 
 
 jestとvue-test-utilsをインストールして、Vux Module Decoratorsで書かれたStoreをテストしてみました。
@@ -14,7 +14,7 @@ jestとvue-test-utilsをインストールして、Vux Module Decoratorsで書�
 ### Vuex Module Decoratorsとは
 Vuex Storeをいい感じにmodule化してくれる + TypeScriptでスマートに書けるようになる、ライブラリです。
 
-<a href="https://www.npmjs.com/package/vuex-module-decorators" target="_blank">https://www.npmjs.com/package/vuex-module-decorators</a>
+<a href="https://www.npmjs.com/package/vuex-module-decorators" target="_blank">`https://www.npmjs.com/package/vuex-module-decorators`</a>
 
 `front/store/Pet.ts`
 ```typescript
@@ -196,5 +196,5 @@ describe('store/Pet.ts', () => {
 
 テスト内容はwapper.vm.メソッド名で返却される値が期待する結果と同値かどうかをtestしているだけです。
 
-次は<a href="https://nestjs.com/" target="_blank">nestjs</a>を使って書かれてたAPIのテスコードを書いてみたいと思います。
+次は<a href="https://nestjs.com/" target="_blank">`nestjs`</a>を使って書かれてたAPIのテスコードを書いてみたいと思います。
 

@@ -8,11 +8,11 @@ description: "【Nuxt.js】スライドアニメーションでページ遷移�
 
 ### ソースコード
 
-<a href="https://github.com/chanfuku/docker_nuxt_ssr02/blob/main/pages/slide1.vue" target="_blank">https://github.com/chanfuku/docker_nuxt_ssr02/blob/main/pages/slide1.vue</a>
+<a href="https://github.com/chanfuku/docker_nuxt_ssr02/blob/main/pages/slide1.vue" target="_blank">`https://github.com/chanfuku/docker_nuxt_ssr02/blob/main/pages/slide1.vue`</a>
 
 ### demo
 
-<a href="https://nuxt-ssr-ebato.herokuapp.com/slide1" target="_blank">https://nuxt-ssr-ebato.herokuapp.com/slide1</a>
+<a href="https://nuxt-ssr-ebato.herokuapp.com/slide1" target="_blank">`https://nuxt-ssr-ebato.herokuapp.com/slide1`</a>
 
 ポイントは、下記のtransitionプロパティでfromとtoを取得出来るので、どこのページから遷移してきたのか、どこのページに遷移にするのか、を判定しtransition用のクラス名を返しているところです。
 
@@ -100,9 +100,9 @@ transition用のcssクラスはこんな感じです。
 
 * Nuxt.jsのtransitionプロパティについて
 
-<a href="https://develop365.gitlab.io/nuxtjs-2.8.X-doc/ja/api/pages-transition/" target="_blank">https://develop365.gitlab.io/nuxtjs-2.8.X-doc/ja/api/pages-transition/</a>
+<a href="https://develop365.gitlab.io/nuxtjs-2.8.X-doc/ja/api/pages-transition/" target="_blank">`https://develop365.gitlab.io/nuxtjs-2.8.X-doc/ja/api/pages-transition/`</a>
 
 * Vue.jsのEnter/Leaveトランジションについて
 
-<a href="https://jp.vuejs.org/v2/guide/transitions.html" target="_blank">https://jp.vuejs.org/v2/guide/transitions.html</a>
+<a href="https://jp.vuejs.org/v2/guide/transitions.html" target="_blank">`https://jp.vuejs.org/v2/guide/transitions.html`</a>
 

@@ -7,7 +7,7 @@ description: "express-openapiでAPIを実装してみた"
 成果物↓
 
 ### github
-<a href="https://github.com/chanfuku/docker-typeorm-express/tree/main/node/examples/openapi-express">https://github.com/chanfuku/docker-typeorm-express/tree/main/node/examples/openapi-express</a>
+<a href="https://github.com/chanfuku/docker-typeorm-express/tree/main/node/examples/openapi-express">https://github.com/chanfuku/docker-typeorm-express/tree/main/node/examples/openapi-express`</a>
 
 ### 動作確認手順
 ```bash
@@ -33,7 +33,7 @@ http://locahost:3000/v1/petsを表示し、こんなレスポンスが返ればO
 ```
 
 ### 解説
-<a href="https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi" target="_blank">express-openapi</a>というライブラリがありまして、こいつを使うとopenapiやswaggerのフォーマットで記載されたyamlを基に、expressで実装したAPIのルーティングを行ってくれます。更に、yamlの定義に従ってvalidationまでしてくれます。つまり、自前でroutingやvalidationを実装する必要がなくなるのです。openapiのyamlをAPIの仕様書として利用できる上に、コード量も減らすことができるという一石二鳥の旨味がある訳です。
+<a href="https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi" target="_blank">`express-openapi`</a>というライブラリがありまして、こいつを使うとopenapiやswaggerのフォーマットで記載されたyamlを基に、expressで実装したAPIのルーティングを行ってくれます。更に、yamlの定義に従ってvalidationまでしてくれます。つまり、自前でroutingやvalidationを実装する必要がなくなるのです。openapiのyamlをAPIの仕様書として利用できる上に、コード量も減らすことができるという一石二鳥の旨味がある訳です。
 
 ### 導入手順
 まず、以下の様にexpress-openapiをインストールします。
@@ -42,9 +42,9 @@ http://locahost:3000/v1/petsを表示し、こんなレスポンスが返ればO
 npm install express-openapi
 ```
 
-次に、yamlを用意します。今回はswaggerの公式が用意している<a href="https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml" target="_blank">こちら</a>のyamlファイルをコピーして使いました。
+次に、yamlを用意します。今回はswaggerの公式が用意している<a href="https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml" target="_blank">`こちら`</a>のyamlファイルをコピーして使いました。
 
-上記のファイルを私は<a href="https://github.com/chanfuku/docker-typeorm-express/tree/main/node/examples/openapi-express/src/v1">こちら</a>に置きました。v1というフォルダに置きましたが、v2でもv3でもOKです。
+上記のファイルを私は<a href="https://github.com/chanfuku/docker-typeorm-express/tree/main/node/examples/openapi-express/src/v1">こちら`</a>に置きました。v1というフォルダに置きましたが、v2でもv3でもOKです。
 
 ポイントは、yamlの中で定義しているserversの部分です。以下の様に各環境のurlを定義します。
 
@@ -79,7 +79,7 @@ servers:
   });
 ```
 
-次にpathハンドラーを作成します。作成したファイルは<a href="https://github.com/chanfuku/docker-typeorm-express/blob/main/node/examples/openapi-express/src/paths/pets.ts" target="_blank">こちら</a>
+次にpathハンドラーを作成します。作成したファイルは<a href="https://github.com/chanfuku/docker-typeorm-express/blob/main/node/examples/openapi-express/src/paths/pets.ts" target="_blank">`こちら`</a>
 
 以下の様にsrc/paths/pets.ts、GETとPOSTを定義しました。petServiceへの依存を注入しています。※POSTが一律200を返したりと、処理自体は適当なので無視してOKです。
 
@@ -134,7 +134,7 @@ $curl http://localhost:3000/v1/pets\?limit\=hoge
 {"status":400,"errors":[{"path":"limit","errorCode":"type.openapi.requestValidation","message":"must be integer","location":"query"}]}
 ```
 
-次に、GET /pets/{id}を実装してみました。<a href="https://github.com/chanfuku/docker-typeorm-express/blob/main/node/examples/openapi-express/src/paths/pets/%7Bid%7D.ts" target="_blank">src/paths/pets/{id}.tsです</a>
+次に、GET /pets/{id}を実装してみました。<a href="https://github.com/chanfuku/docker-typeorm-express/blob/main/node/examples/openapi-express/src/paths/pets/%7Bid%7D.ts" target="_blank">`src/paths/pets/{id}.tsです`</a>
 
 paths以下のフォルダ名とファイル名でroutingを表現してくれています。
 

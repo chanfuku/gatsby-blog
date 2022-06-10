@@ -13,10 +13,10 @@ Leaflet.jsというJS製の地図描画ライブラリがあります。
 実用性は0ですが、ランダムで表示されるにゃんこ達には癒やされること間違いなしです。
 
 ### Demo(pcのみ)
-<a href="https://nuxt-spa-ebato.herokuapp.com/leaflet" target="_blank">https://nuxt-spa-ebato.herokuapp.com/leaflet</a>
+<a href="https://nuxt-spa-ebato.herokuapp.com/leaflet" target="_blank">`https://nuxt-spa-ebato.herokuapp.com/leaflet`</a>
 
 ### リポジトリ
-<a href="https://github.com/chanfuku/docker_nuxt_spa" target="_blank">https://github.com/chanfuku/docker_nuxt_spa</a>
+<a href="https://github.com/chanfuku/docker_nuxt_spa" target="_blank">`https://github.com/chanfuku/docker_nuxt_spa`</a>
 
 ### 学んだこと
 * leafletはSSRでは動作しないので、SPAモードで開発した方が良い。SSRで動かすには色々とハマりポイントがある。
@@ -25,6 +25,6 @@ Leaflet.jsというJS製の地図描画ライブラリがあります。
 * 画像上に図を描画し終えた後、画面サイズの異なる環境で表示すると位置がずれる問題は、画像の縦横pxをboundsに設定し、leafletのmapObjectをfitBounds(bounds)すればOK。
 * 一般的にはxは横軸yは縦軸を表すが、leafletはlat(緯度)lng(経度)を用いて座標を特定する。左下が(0, 0)で(lat, lng)で表現するが、lat=y、lng=x、つまりx, yが逆なので要注意。
 * Leaflet公式ドキュメント
-<a href="https://vue2-leaflet.netlify.app/" target="_blank">https://vue2-leaflet.netlify.app/</a>
-<a href="https://leafletjs.com/SlavaUkraini/" target="_blank">https://leafletjs.com/SlavaUkraini/</a>
+<a href="https://vue2-leaflet.netlify.app/" target="_blank">`https://vue2-leaflet.netlify.app/`</a>
+<a href="https://leafletjs.com/SlavaUkraini/" target="_blank">`https://leafletjs.com/SlavaUkraini/`</a>
 
