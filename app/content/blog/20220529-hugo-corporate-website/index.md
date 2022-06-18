@@ -16,7 +16,7 @@ SSGは他にはNext.js, Nuxt.js, Gatsby.js等があります。ちなみに、�
 ## theme
 テーマ(テンプレート)は↓を使いました。
 
-<a href="https://themes.gohugo.io/themes/doks/">https://themes.gohugo.io/themes/doks/`</a>
+<a href="https://themes.gohugo.io/themes/doks/" target="_blank">https://themes.gohugo.io/themes/doks/`</a>
 
 ## 完成したサイト(デモ版)
 <a href="https://serene-gecko-c4716b.netlify.app/" target="_blank">`https://serene-gecko-c4716b.netlify.app/`</a>
