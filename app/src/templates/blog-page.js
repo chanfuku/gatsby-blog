@@ -1,27 +1,13 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Pagination from "../components/pagination"
 
-const BlogIndex = ({ data, location }) => {
+const BlogPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title={siteTitle} />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -42,10 +28,10 @@ const BlogIndex = ({ data, location }) => {
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}titleです</span>
+                      <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}dateです</small>
+                  <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -53,7 +39,7 @@ const BlogIndex = ({ data, location }) => {
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
-                  />pです
+                  />
                 </section>
               </article>
             </li>
@@ -64,20 +50,21 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default BlogPage
 
-export const pageQuery = graphql`
-  query {
+export const query = graphql`
+  query ($limit: Int!, $skip: Int!) {
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      skip: 0
-      limit: 5
-    ) {
+      skip: $skip
+      limit: $limit
+      ) {
       totalCount
       nodes {
         excerpt

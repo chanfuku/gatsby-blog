@@ -84,7 +84,7 @@ $ python3 add-back-quote-to-link.py
 content = content.replace('_blank">', '_blank">`')
 content = content.replace('</a>', '`</a>')
 ```
-1. 置換後のテキストを`file_path.write_text(content)`で対象ファイルに書き込む
+6. 置換後のテキストを`file_path.write_text(content)`で対象ファイルに書き込む
 
 これからはPython力を上げるためにも、
 

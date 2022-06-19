@@ -15,6 +15,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {
+          totalCount
           nodes {
             id
             fields {
@@ -35,6 +36,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const PerPage = 5
+  const pageCount = Math.ceil(result.data.allMarkdownRemark.totalCount / PerPage)
+
+  for (let i = 0; i < pageCount; i++) {
+    createPage({
+      path: `/blog/page/${i + 1}`,
+      component: path.resolve("./src/templates/blog-page.js"),
+      context: {
+        limit: PerPage,
+        skip: i * PerPage,
+      },
+    })
+  }
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
