@@ -47,10 +47,10 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop --host 0.0.0.0",
+    "develop": "gatsby develop --host 0.0.0.0 --port 8001",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop --host 0.0.0.0",
-    "serve": "gatsby serve --host 0.0.0.0",
+    "start": "gatsby develop --host 0.0.0.0 --port 8001",
+    "serve": "gatsby serve --host 0.0.0.0 --port 8001",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }

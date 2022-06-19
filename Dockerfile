@@ -7,5 +7,5 @@ RUN apt-get update && \
 
 RUN npm install -g gatsby-cli
 
-EXPOSE 8000 9000
+EXPOSE 8001 9000
 
