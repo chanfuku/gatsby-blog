@@ -27,7 +27,6 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title={siteTitle} />
       <Bio />
-      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -42,10 +41,10 @@ const BlogIndex = ({ data, location }) => {
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}titleです</span>
+                      <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}dateです</small>
+                  <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -53,13 +52,14 @@ const BlogIndex = ({ data, location }) => {
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
-                  />pです
+                  />
                 </section>
               </article>
             </li>
           )
         })}
       </ol>
+      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
     </Layout>
   )
 }
