@@ -13,7 +13,6 @@ const BlogPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title={siteTitle} />
       <Bio />
-      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -46,6 +45,7 @@ const BlogPage = ({ data, location }) => {
           )
         })}
       </ol>
+      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
     </Layout>
   )
 }
