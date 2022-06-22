@@ -4,7 +4,8 @@ date: "2022-06-22T11:12:03.284Z"
 description: "【Gatsby】paginationを実装した"
 ---
 
-このブログも徐々に記事数が増えてきたのでpagenationを実装してみました。
+このブログも徐々に記事数が増えてきたので、pagenationを追加しようということで、
+<a href="https://github.com/NickyMeuleman/gatsby-paginated-blog" target="_blank">`paginationのライブラリ`</a>が既に世の中にあるのですが、reactとGraphQLの勉強も兼ねてあえて自前で実装してみました。
 
 ## repo
 <a href="https://github.com/chanfuku/gatsby-blog" target="_blank">
