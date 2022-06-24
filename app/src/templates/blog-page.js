@@ -9,13 +9,14 @@ import Posts from "../components/posts"
 const BlogPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const currentPage = location.pathname.replace('/page/', '')
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={siteTitle} />
       <Bio />
       <Posts posts={posts} />
-      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
+      <Pagination totalCount={data.allMarkdownRemark.totalCount} currentPage={currentPage} />
     </Layout>
   )
 }

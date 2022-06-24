@@ -28,7 +28,7 @@ const Pagination = ({ totalCount }) => {
     <ul class="pagenation">
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
         <li key={index}>
-          <Link to={`/blog/page/${number}`}>{number}</Link>
+          <Link to={`/page/${number}`}>{number}</Link>
         </li>
       ))}
     </ul>
@@ -210,7 +210,7 @@ index.js
 
   for (let i = 0; i < pageCount; i++) {
     createPage({
-      path: `/blog/page/${i + 1}`,
+      path: `/page/${i + 1}`,
       component: path.resolve("./src/templates/blog-page.js"),
       context: {
         limit: PerPage,

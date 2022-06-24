@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   for (let i = 0; i < pageCount; i++) {
     createPage({
-      path: `/blog/page/${i + 1}`,
+      path: `/page/${i + 1}`,
       component: path.resolve("./src/templates/blog-page.js"),
       context: {
         limit: PerPage,

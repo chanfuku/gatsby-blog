@@ -1,19 +1,37 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
+import { makeStyles } from "@material-ui/core/styles"
+import { Pagination as MuPagination } from "@material-ui/lab"
 
-const Pagination = ({ totalCount }) => {
+const useStyles = makeStyles({
+  root: {
+    display: `flex`,
+    flexWrap: `wrap`,
+    justifyContent: `center`,
+    alignItems: "center",
+  },
+});
+
+const Pagination = ({ totalCount, currentPage = 1 }) => {
+  const classes = useStyles()
   const PER_PAGE = 5
+  const numberOfPages = Math.ceil(totalCount / PER_PAGE)
+  const defaultPage = 1
 
-  const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i)
-
+  const handleChange = (_event, value) => {
+    value === 1 ? navigate(`/`) : navigate(`/page/${value}`)
+  }
   return (
-    <ul class="pagenation">
-      {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
-        <li key={index}>
-          <Link to={`/blog/page/${number}`}>{number}</Link>
-        </li>
-      ))}
-    </ul>
+    <div className={classes.root}>
+      <MuPagination
+        variant="outlined"
+        defaultPage={defaultPage}
+        count={numberOfPages}
+        onChange={handleChange}
+        page={Number(currentPage)}
+        color="primary"
+      />
+    </div>
   )
 }
 
