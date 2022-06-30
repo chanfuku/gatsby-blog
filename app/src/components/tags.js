@@ -13,7 +13,7 @@ const Tags = ({
   },
 }) => {
 
-  const showTaglist = false
+  const showTaglist = true
 
   return (
     <>
