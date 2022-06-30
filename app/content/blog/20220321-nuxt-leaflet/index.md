@@ -2,6 +2,7 @@
 title: nuxt-leafletで写真に目印を付ける
 date: "2022-03-21T22:12:03.284Z"
 description: "nuxt-leafletで写真に目印を付ける"
+tags: ["Nuxt", "Typescript", "leaflet", "Vue"]
 ---
 
 Leaflet.jsというJS製の地図描画ライブラリがあります。

@@ -2,6 +2,7 @@
 title: GitHub ActionsでSPAをS3にデプロイする
 date: "2022-04-24T11:12:03.284Z"
 description: "GitHub ActionsでSPAをS3にデプロイし、Cloud Frontのキャッシュクリアをする"
+tags: ["CI/CD", "GitHub", "AWS"]
 ---
 
 以下の手順で対応していきます。

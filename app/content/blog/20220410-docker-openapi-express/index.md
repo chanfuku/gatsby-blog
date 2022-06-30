@@ -2,6 +2,7 @@
 title: 【OpenApi】 ymlを使って開発効率 & 品質アップ
 date: "2022-04-10T22:12:03.284Z"
 description: "【OpenApi】 ymlを使って開発効率 & 品質アップ"
+tags: ["OpenApi", "Nuxt", "Typescript", "Express"]
 ---
 
 業務の備忘録。いくつかのライブラリを使うと、apiを定義したymlファイルをベースに、

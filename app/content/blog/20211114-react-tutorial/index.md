@@ -2,6 +2,7 @@
 title: 【React】Next.jsの公式チュートリアルをやって学んだこと
 date: "2021-11-14T22:12:03.284Z"
 description: "【React】Next.jsの公式チュートリアルをやって学んだこと"
+tags: ["React", "Next"]
 ---
 
 Reactの公式チュートリアルはさらっと読んだ上で、Next.js(Reactのフレームワーク）のチュートリアルをやってみました。

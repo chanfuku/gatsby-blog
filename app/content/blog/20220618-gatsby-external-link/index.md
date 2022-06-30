@@ -2,6 +2,7 @@
 title: 【Python】全てのテキストファイル内のある文字列を置換する
 date: "2022-06-18T11:12:03.284Z"
 description: "【Python】全てのテキストファイル内のある文字列を置換する"
+tags: ["Gatsby", "React", "Python"]
 ---
 
 このブログの記事は全てMarkdownのファイルで管理しているのですが、

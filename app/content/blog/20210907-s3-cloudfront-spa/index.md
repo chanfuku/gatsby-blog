@@ -2,6 +2,7 @@
 title: S3 + CloudFront + Route53 でNuxt.jsのSPAを配信する
 date: "2021-09-07T22:12:03.284Z"
 description: "S3 + CloudFront + Route53 でNuxt.jsのSPAを配信する"
+tags: ["AWS", "Nuxt"]
 ---
 
 タイトルにある通りですが今回は「Nuxt.jsのSPAをAWSのS3 + Cloudfront + Route53で配信」に挑戦してみました。※Nuxt.jsでSPAを作成する方法は割愛します。

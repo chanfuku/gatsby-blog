@@ -2,6 +2,7 @@
 title: Laravelのdocker環境を作った
 date: "2021-11-07T22:12:03.284Z"
 description: "Laravelのdocker環境を作った"
+tags: ["Laravel", "Docker", "PHP"]
 ---
 
 仕事でLaravelをよく触るのですが、自分で0から環境構築したことがなかったのでやってみました。マイグレーション・テストデータ投入、そしてGetとPostのAPIを一本ずつ作ったので動作確認もできます。

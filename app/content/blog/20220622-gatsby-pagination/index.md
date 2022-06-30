@@ -2,6 +2,7 @@
 title: 【Gatsby】paginationを実装した
 date: "2022-06-22T11:12:03.284Z"
 description: "【Gatsby】paginationを実装した"
+tags: ["Gatsby", "React"]
 ---
 
 このブログも徐々に記事数が増えてきたので、pagenationを追加しようということで、
