@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import kebabCase from "lodash/kebabCase"
+import IsMobileSize from "../lib/mediaQuery"
 
 const Tags = ({
   data: {
@@ -13,7 +14,7 @@ const Tags = ({
   },
 }) => {
 
-  const showTaglist = true
+  const showTaglist = !IsMobileSize()
 
   return (
     <>
