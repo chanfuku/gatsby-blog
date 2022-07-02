@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 const Pagination = ({ totalCount, currentPage = 1 }) => {
   const classes = useStyles()
-  const PER_PAGE = 5
+  const PER_PAGE = 8
   const numberOfPages = Math.ceil(totalCount / PER_PAGE)
   const defaultPage = 1
 

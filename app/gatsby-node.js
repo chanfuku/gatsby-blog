@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
-  const PerPage = 5
+  const PerPage = 8
   const pageCount = Math.ceil(result.data.allMarkdownRemark.totalCount / PerPage)
 
   for (let i = 0; i < pageCount; i++) {
