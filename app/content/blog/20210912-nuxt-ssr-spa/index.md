@@ -2,7 +2,7 @@
 title: Nuxt.js のUniversal(SSR)とSPAの挙動を比較してきづいたこと
 date: "2021-09-12T22:12:03.284Z"
 description: "Nuxt.js のUniversal(SSR)とSPAの挙動を比較してきづいたこと"
-tags: ["Nuxt", "SSR", "Vue"]
+tags: ["Nuxt", "SSR", "Vue", "Docker"]
 ---
 
 今回はNuxt.jsのUniversal modeとSingle Page Appをそれぞれ実装・動作検証した中で、気付いたことをまとめました。

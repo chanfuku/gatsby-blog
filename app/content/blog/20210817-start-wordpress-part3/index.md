@@ -2,6 +2,7 @@
 title: EC2とDockerで独自ドメインのwordpressブログを公開する part3
 date: "2021-08-17T22:12:03.284Z"
 description: "EC2とDockerで独自ドメインのwordpressブログを公開する part3"
+tags: ["AWS", "Docker"]
 ---
 
 * [part1](../20210815-start-wordpress-part1)

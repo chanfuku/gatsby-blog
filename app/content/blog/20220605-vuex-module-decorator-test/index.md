@@ -2,7 +2,7 @@
 title: 【Nuxt】Vuex Module Decoratorで書かれたStoreをテストする
 date: "2022-06-05T11:12:03.284Z"
 description: "【Nuxt】Vuex Module Decoratorで書かれたStoreをテストする"
-tags: ["Vue", "Nuxt", "Typescript", "ユニットテスト"]
+tags: ["Vue", "Nuxt", "Typescript", "Unit Test"]
 ---
 
 

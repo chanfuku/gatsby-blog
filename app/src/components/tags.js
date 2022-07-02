@@ -22,7 +22,7 @@ const Tags = ({
         <div className="taglist">
           <Helmet title={title} />
           <div>
-            <h3>categories</h3>
+            <h3>tags</h3>
             <ul>
               {group.map(tag => (
                 <li key={tag.fieldValue}>

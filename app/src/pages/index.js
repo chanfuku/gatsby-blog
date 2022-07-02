@@ -51,7 +51,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       skip: 0
-      limit: 5
+      limit: 8
     ) {
       totalCount
       nodes {
