@@ -1,7 +1,7 @@
 ---
 title: 【Nuxt.js】スライドアニメーションでページ遷移する方法
 date: "2021-09-19T22:12:03.284Z"
-description: "【Nuxt.js】スライドアニメーションでページ遷移する方法"
+description: "仕事で対応したことの備忘録です..."
 tags: ["Nuxt", "css", "Vue"]
 ---
 

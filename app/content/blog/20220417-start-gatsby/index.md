@@ -1,7 +1,7 @@
 ---
 title: Gatsbyに移行しました
 date: "2022-04-17T22:12:03.284Z"
-description: "Gatsbyに移行しました"
+description: "もともとはWordPress + AWSで運用していましたが"
 tags: ["Gatsby", "Docker"]
 ---
 
