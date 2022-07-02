@@ -1,7 +1,7 @@
 ---
 title: 【Kubernetes】よく使うkubectlコマンド
 date: "2022-05-09T11:12:03.284Z"
-description: "【Kubernetes】よく使うkubectlコマンド"
+description: "Kubernetes初心者です。随時追加・整理していきます。"
 tags: ["Kubernetes"]
 ---
 

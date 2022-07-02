@@ -1,7 +1,7 @@
 ---
 title: Laravelのdocker環境を作った
 date: "2021-11-07T22:12:03.284Z"
-description: "Laravelのdocker環境を作った"
+description: "仕事でLaravelをよく触るのですが、自分で0から環境構築..."
 tags: ["Laravel", "Docker", "PHP"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 【Gatsby】tagを実装した
 date: "2022-07-02T11:12:03.284Z"
-description: "【Gatsby】tagを実装した"
+description: "記事が多くなってきたので、タグを付けてタグ別のページを作りたい..."
 tags: ["Gatsby", "React", "GraphQL"]
 ---
 

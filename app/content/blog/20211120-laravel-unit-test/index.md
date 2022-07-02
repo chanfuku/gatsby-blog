@@ -1,7 +1,7 @@
 ---
 title: 【Laravel】インメモリSqliteを使ってDB周りのテストコードを書く
 date: "2021-11-20T22:12:03.284Z"
-description: "【Laravel】インメモリSqliteを使ってDB周りのテストコードを書く"
+description: "業務で、インメモリSqliteを使ってローカル開発環境のDBが汚れることなく..."
 tags: ["Laravel", "Unit Test", "Docker", "PHP"]
 ---
 

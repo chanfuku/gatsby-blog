@@ -1,7 +1,7 @@
 ---
 title: GitHub ActionsでSPAをS3にデプロイする
 date: "2022-04-24T11:12:03.284Z"
-description: "GitHub ActionsでSPAをS3にデプロイし、Cloud Frontのキャッシュクリアをする"
+description: "「S3にデプロイ + CloudFront キャッシュクリア」の権限を持った..."
 tags: ["CI/CD", "GitHub", "AWS"]
 ---
 
