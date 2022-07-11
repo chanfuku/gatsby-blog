@@ -7,12 +7,12 @@ tags: ["React", "Next", "Contentful", "Typescript"]
 
 前回作ったブログの記事をCMSで更新出来るように<a href="https://www.contentful.com/" target="_blank">`Contentful`</a>を導入してみました。
 
-## 完成(demo)
+### 完成(demo)
 <a href="https://next-typescript-blog-with-search.vercel.app/" target="_blank">
 https://next-typescript-blog-with-search.vercel.app/
 </a>
 
-## repo
+### repo
 <a href="https://github.com/chanfuku/next-contentful-typescript-blog" target="_blank">
 https://github.com/chanfuku/next-contentful-typescript-blog
 </a>
@@ -34,7 +34,7 @@ Blog Postはこんな感じ↓
 ![Image2](./img2.png)
 
 ## 記事を作成してみる
-Content > Add Blog Postで記事を作成してみます。既に3つの記事が自動的に作成されてました。「Test Tile」というタイトルの記事を追加で作成しました。
+Content > Add Blog Postで記事を作成してみます。既に3つの記事が自動的に作成されてました。「Test Title」というタイトルの記事を追加で作成しました。
 
 ![Image4](./img4.png)
 
@@ -53,20 +53,21 @@ Content > Post > Tags と進むとtag設定画面が表示されます。
 ![Image6](./img6.png)
 
 
-## Client Codeを自動生成する
-<a href="https://github.com/intercom/contentful-typescript-codegen" target="_blank">
+## Clientの型を自動生成する
+TypescriptでAPIのレスポンスのを型定義をするのが若干大変なので<a href="https://github.com/intercom/contentful-typescript-codegen" target="_blank">
 contentful-typescript-codegen
 </a>
-を使って、clientのコードを自動生成したいと思います。
+を使って、型を自動生成したいと思います。
 他にも必要なライブラリがいくつかあるのでまとめてinstallします。
 
 ```
 npm install contentful contentful-management dotenv contentful-typescript-codegen
 ```
 
-## <rootディレクトリ>/getContentfulEnvironment.jsを作成する
+## getContentfulEnvironment.jsを作成する
 
 ```js
+// ./getContentfulEnvironment.js
 require('dotenv').config()
 const contentfulManagement = require("contentful-management")
 
@@ -127,8 +128,6 @@ export const client = createClient(config)
 ```
 
 ## lib/api.tsを作成する
-今回は<a href="https://www.contentful.com/developers/docs/references/content-delivery-api/" target="_blank">Conetent Delivery API</a>しか使いませんでしたが、他にもContent Management API, Content Preview API, Images API, GraphQL Content API, User Management API等あるようです。
-
 記事(Post)を取得する`getAllPosts`とタグ(Tag)を取得する`getAllTags`を定義しました。
 
 ```js
@@ -205,8 +204,11 @@ export async function getStaticPaths() {
 ```
 
 ## pages/index.tsxに検索機能を追加
-記事一覧はbuild時にContentful APIで取得済、また、ただのブログなので頻繁に検索結果が変わるものでもないため、
-再度APIをcallするのではなく、シンプルにjavascriptでfilterするようにしました。
+
+![Image7](./img7.png)
+
+頻繁に記事が更新される訳でもないのでAPIで取得するのではなく、取得済のPostsをシンプルにjavascriptでfilterするようにしました。
+
 
 ```js
 // pages/index.tsx
@@ -224,5 +226,4 @@ export async function getStaticPaths() {
   }
 ```
 
-以上です
-
+今回は<a href="https://www.contentful.com/developers/docs/references/content-delivery-api/" target="_blank">Conetent Delivery API</a>しか使いませんでしたが、他にもContent Management API, Content Preview API, Images API, GraphQL Content API, User Management API等あるようです。
