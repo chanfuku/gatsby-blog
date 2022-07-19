@@ -7,10 +7,10 @@ tags: ["React", "Next", "Unit Test", "Typescript"]
 
 これまでVueではそこそこUnit Testを書いてきたのですが、Reactではどうやって書くのだろうか、ということでjestを導入するところからやってみました。
 ## 成果物Repo
+
 <a href="https://github.com/chanfuku/next-contentful-typescript-blog" target="_blank">
 https://github.com/chanfuku/next-contentful-typescript-blog
 </a>
-
 
 まずは環境構築ということで、
 
@@ -64,7 +64,11 @@ import '@testing-library/jest-dom/extend-expect'
 
 これでjestの環境構築は完了したので、テストコードを書いてきます。
 
-## `__tests__/components/search-box.spec.tsx`を作成します
+## __tests__/にxxx.spec.tsxを作成します
+
+jestはdefaultで`__tests__`以下に置いてあるファイルあるいは.spec/.textのファイルを見にいくそうです。
+
+「<a href="https://github.com/vercel/next.js/tree/canary/examples/with-jest" target="_blank">`next.js/examples/with-jest`</a>」も__test__にテストファイルを置いているのでそれを参考にしました。
 
 <details>
 <summary><strong>__tests__/components/search-box.spec.tsxの全体はこちら</strong></summary>
