@@ -1,7 +1,7 @@
 ---
 title: 【Jest】ユニットテストが書きやすいコードを書きたい
 date: "2022-08-07T11:12:03.284Z"
-description: "ユニットテスト書いてますか？"
+description: "React Hooksに依存している部分を外部のモジュールに切り出して"
 tags: ["React", "Next", "Jest", "Typescript", "Unit Test"]
 ---
 
@@ -9,8 +9,15 @@ tags: ["React", "Next", "Jest", "Typescript", "Unit Test"]
 Reactのアプリケーション
 </a>
 に、ユニットテストを追加しようとしたところ、一部の関数がReact Hooksに依存してしまっていたので、テストコードが書き辛いことになっていました。
+React Hooksのテストコード実装方法もあるにはあるのですが、`@testing-library/react-hooks`をインストールしないといけなかったり少し手間がかかります。
+また、APIに依存しているモジュールのテストはどうやって書くのだろうか。
 
-React Hooksのテストコード実装方法もあるにはあるのですが、`@testing-library/react-hooks`をインストールしないといけなかったり少し手間がかかるので今回は、React Hooksに依存させないように関数を外部のモジュールに切り出して、テストコードが書きやすくなるようにリファクタリングした、という内容です。
+ということで、今回は、
+1. 今回は、React Hooksに依存させないように関数を外部のモジュールに切り出して、テストコードが書きやすくなるようにリファクタリングした。
+
+1. APIに依存している部分をmock化してテストコードを書いた。
+
+という内容です。
 
 ## リファクタリング前
 `pages/index.tsx`
@@ -205,6 +212,78 @@ test('getSelectedTags', () => {
 });
 ```
 
-今回はReact Hooksに依存している関数の一部の処理を外部のモジュールに切り出してテストコードを書きました。
+## APIに依存しているモジュールをmock化してテストコードを書く
+#### lib/api.ts
+```js
+import { client } from '../utils/client'
+import { IBlogPostFields } from '../@types/generated/contentful'
+import { Entry, Tag } from 'contentful'
+
+export async function getAllPosts(params: {}): Promise<Entry<IBlogPostFields>[]> {
+  const { items } = await client.getEntries<IBlogPostFields>(params)
+  return items
+}
+
+export async function getAllTags(): Promise<Tag[]> {
+  const { items } = await client.getTags()
+  return items
+}
+```
+
+上記の2つの関数のテストコードを書いてみます。
+
+#### __tests__/lib/api.spec.ts
+```js
+import { client } from '../../utils/client'
+import { getAllPosts, getAllTags } from '../../lib/api'
+import { allTags } from '../components/search-box.spec'
+
+export const blogItems = [
+  {
+    fields: {
+      title: 'Test Title1',
+      slug: 'test-slug1',
+      description: 'test description1',
+      body: 'test body1',
+      publishDate: '2022-07-19T00:00+09:00',
+    }
+  },
+  {
+    fields: {
+      title: 'Test Title2',
+      slug: 'test-slug2',
+      description: 'test description2',
+      body: 'test body2',
+      publishDate: '2022-07-20T00:00+09:00',
+    }
+  }
+] as const
+
+describe('lib/api.ts', () => {
+
+  beforeEach(() => {
+    // 記事一覧のレスポンスをmock化する
+    jest.spyOn(client, 'getEntries').mockResolvedValue({ items: blogItems } as any)
+    // タグ一覧のレスポンスをmock化する
+    jest.spyOn(client, 'getTags').mockResolvedValue({ items: allTags } as any)
+  })
+
+  test('getAllPostsの戻り値が正しい', async () => {
+    const result = await getAllPosts({ content_type: 'blogPost' })
+    expect(result).toStrictEqual(blogItems)
+  })
+
+  test('getAllTagsの戻り値が正しい', async () => {
+    const result = await getAllTags()
+    expect(result).toStrictEqual(allTags)
+  })
+})
+
+
+```
+
+jestのspyOnを使ってgetEntriesやgetTagsをmock化すると、テストコードが書きやすくなります。
+
+今回はReact Hooksに依存している関数の一部の処理を外部のモジュールに切り出してテストコードを書いたり、jestのSpyOnでmock化してテストコードを書くということをやってみました。
 
 React Hooksに依存している関数のテストコードも書きたいのですが...そこは次回以降に`@testing-library/react-hooks`をinstallする方法で対応してみたいと思います。

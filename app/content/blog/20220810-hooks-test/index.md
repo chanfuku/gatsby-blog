@@ -12,18 +12,18 @@ React(Next.js)のアプリケーション
 
 独自のフックを作成すると何のメリットがあるのかと言うと、コンポーネントからロジックを抽出して再利用可能な関数を作ることが可能になり、コードの見通しが良くなる & テストコードが書きやすくなります。
 
-## Repo
+## 成果物Repo
 <a href="https://github.com/chanfuku/next-contentful-typescript-blog" target="_blank">
 https://github.com/chanfuku/next-contentful-typescript-blog
 </a>
 
-## 参考にしたサイト
+### 参考にしたページ
 <a href="https://ja.reactjs.org/docs/hooks-custom.html" target="_blank">
-【React公式】https://ja.reactjs.org/docs/hooks-custom.html
-</a>
+https://ja.reactjs.org/docs/hooks-custom.html
+</a><br>
 
 <a href="https://github.com/testing-library/react-hooks-testing-library" target="_blank">
-@testing-library/react-hooks
+https://github.com/testing-library/react-hooks-testing-library
 </a>
 
 ## 作成した独自フック
@@ -174,14 +174,13 @@ const { result } = renderHook(() => useSearch(allPosts))
     expect(result.current.posts).toStrictEqual([post1])
 ```
 
-
-## 想像力を使いなさい
+## 想像力を働かせなさい
 
 ![Image1](./img1.png)
 
 React公式の独自フックについて記載されているページの最後の方に、大きく`useYourImagination()`と記載されています。
 
-直訳すると、「想像力を使いなさい」。
+直訳すると、「想像力を働かせなさい」。
 
 想像力が必要ということは、それだけ自由度が高いのだと思います。
 
