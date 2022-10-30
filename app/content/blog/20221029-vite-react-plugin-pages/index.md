@@ -1,12 +1,16 @@
 ---
 title: Vite + react + plugin-pagesを試してみた
 date: "2022-10-29T11:12:03.284Z"
-description: "Viteとはフランス語で「素早い」という意味で、より速く無駄のない開発体験を提供することを目的としたビルドツールです。"
+description: "Viteとはフランス語で「素早い」という意味で、より速く無駄のない開発体験を提供することを目的とした次世代のビルドツールです。"
 tags: ["React", "Vite", "Typscript"]
 ---
 
-## github repo
-https://github.com/chanfuku/vite-playground/tree/main/react-plugin-pages
+Viteとはフランス語で「素早い」という意味で、より速く無駄のない開発体験を提供することを目的とした次世代のビルドツール、らしいです。※公式サイトより抜粋
+
+どんなものか感触を掴むために、Vite + React + vite-plugin-pagesのサイトをdockerで構築してみました。
+
+## Vite
+https://ja.vitejs.dev/
 
 こんな感じで作ったので手順をメモしておきます。
 ## vite用のディレクトリ作成
@@ -69,8 +73,6 @@ Ok to proceed? (y) y
 ## npm install & npm run devで起動してみる
 ※ docker containerの中で実行します。
 
-すると、http://localhost:5173/で起動しますが、docker-compose.ymlにportの定義していないのでブラウザでは表示できません。
-
 ```bash
 # cd /vite/sample-app/
 # /vite/sample-app # npm install
@@ -81,6 +83,7 @@ Ok to proceed? (y) y
   ➜  Network: use --host to expose
 ```
 
+すると、`http://localhost:5173/`で起動しました、と表示されますが、
 `http://localhost:5173/` にアクセスすると、以下のようにエラーになります。
 
 ![img2](./img2.png)
@@ -93,6 +96,7 @@ Ok to proceed? (y) y
 hostやportについてドキュメントに記載されてました。
 
 <a href="https://ja.vitejs.dev/config/server-options.html#server-host" target="_blank">server.hostについて</a>
+
 <a href="https://ja.vitejs.dev/config/server-options.html#server-port" target="_blank">server.portについて</a>
 
 上記に習って、以下の様にserver.hostとserver.portを指定します。
@@ -161,7 +165,7 @@ $docker-compose exec vite /bin/sh
 /vite/sample-app # npm install react-router react-router-dom 
 ```
 
-## vite.config.tsにpluginの定義を追加する
+## vite.config.tsにvite-plugin-pagesの定義をpluginに追加する
 
 #### vite.config.ts 
 ```js
@@ -271,5 +275,8 @@ pages
 トップページを表示するとこんな感じです。
 
 ![img3](./img3.png)
+
+## github repo
+https://github.com/chanfuku/vite-playground/tree/main/react-plugin-pages
 
 blogやaboutのリンクをクリックすると画面遷移が確認できるかと思います。
