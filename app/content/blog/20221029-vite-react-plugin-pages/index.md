@@ -157,7 +157,10 @@ docker-compose up -d
 vite + Reactの初期状態はreact-router等の機能が入っていないため、画面遷移が出来ません。
 そこで、react-routerをwrapしたrouterライブラリ(vite-plugin-page)を試してみたいと思います。
 
-<a href="https://github.com/hannoeru/vite-plugin-pages" target="_blank">vite-plugin-pageはこちら</a>
+#### vite-plugin-page
+<a href="https://github.com/hannoeru/vite-plugin-pages" target="_blank">https://github.com/hannoeru/vite-plugin-pages</a>
+
+上記リポジトリの<a href="https://github.com/hannoeru/vite-plugin-pages/tree/main/examples/react" target="_blank">examples/react</a>を参考に導入しました。
 
 ```bash
 $docker-compose exec vite /bin/sh
@@ -270,13 +273,15 @@ pages
 └── index.tsx
 ```
 
-## 6. 動作確認
+## 動作確認
 
 トップページを表示するとこんな感じです。
 
 ![img3](./img3.png)
 
+blogやaboutのリンクをクリックすると画面遷移が確認できるかと思います。
+
 ## github repo
+今回の成果物。
 https://github.com/chanfuku/vite-playground/tree/main/react-plugin-pages
 
-blogやaboutのリンクをクリックすると画面遷移が確認できるかと思います。
