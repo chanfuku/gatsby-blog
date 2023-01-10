@@ -9,9 +9,9 @@ gatsby-blog
 .
 You can now view gatsby-starter-blog in the browser.
 ⠀
-  Local:            http://localhost:8000/
+  Local:            http://localhost:8001/
 ⠀
 View GraphiQL, an in-browser IDE, to explore your site's data and schema
 ⠀
-  Local:            http://localhost:8000/___graphql
+  Local:            http://localhost:8001/___graphql
 ```
