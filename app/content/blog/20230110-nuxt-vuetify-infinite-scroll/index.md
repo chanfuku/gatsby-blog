@@ -6,7 +6,7 @@ tags: ["Nuxt", "Vue", "Vuetify", "SSR", "Express"]
 ---
 
 
-業務でVuetifyのv-virtual-scrollとv-intersectを使って無限スクロールを実装したので備忘録として残します。
+業務でVuetifyのv-virtual-scrollとv-intersectを使って無限スクロールを実装したので備忘録として、簡易版を再度実装しました。
 
 スクロールの一番下に辿り着くと次のページの分をAPIでfetchして表示するという、よくある無限スクロールです。
 
@@ -17,7 +17,18 @@ ApiはNuxt.js(SSR) + express.jsで簡易的に作りました。vueは2系です
 こういうやつです↓残念ながら動画の埋め込み方が分からなかったのでただの画像です。
 
 ![img1](./img1.png)
-## 今回の成果物
+
+## v-virtual-scroll と v-intersect が何をしているのか
+
+v-virtual-scrollは、スクロールのビューポートを埋めるために必要なものだけをレンダリングすることで、パフォーマンスを損なうことなく無制限のアイテムを表示することが出来るコンポーネントです。
+
+v-intersectは、対象の要素がビューポート内に表示されたタイミングを検知してくれるコンポーネントです。
+
+v-virtual-scrollは、APIで大量のデータを取得し、リストでレンダリングする場合に活躍しそうです。
+
+今回はAPIで1ページあたり20件ずつ取得&レンダリングする仕組みで実装したので、v-virtual-scrollがなくても問題なさそうですが、使った方がbetterだろうということでv-virtual-scrollも使いました。
+
+## git repo
 ※とにかく動けばOKというノリで作ったので、typescript使ってるのになぜ型定義してないんだ、等ツッコミどころが多々あります。
 
 <a href="https://github.com/chanfuku/docker_nuxt_ssr02/blob/main/pages/infinite-scroll.vue" target="_blank">
