@@ -1,6 +1,6 @@
 ---
 title: 【Vuetify】無限スクロールを実装した
-date: "2023-01-22T11:12:03.284Z"
+date: "2023-01-10T11:12:03.284Z"
 description: "Vuetifyのv-virtual-scrollとv-intersectを使って無限スクロールを実装しました"
 tags: ["Nuxt", "Vue", "Vuetify", "SSR", "Express"]
 ---
