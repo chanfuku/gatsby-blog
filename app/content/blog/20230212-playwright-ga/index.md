@@ -1,6 +1,6 @@
 ---
 title: 【playwright】面倒な事務作業を自動化する試み
-date: "2023-01-19T11:12:03.284Z"
+date: "2023-02-12T11:12:03.284Z"
 description: "playwrightとgoogle apps scriptを使って日々の面倒なルーティング作業を自動化しました"
 tags: ["playwright", "google apps script"]
 ---
