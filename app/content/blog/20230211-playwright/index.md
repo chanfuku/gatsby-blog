@@ -1,10 +1,9 @@
 ---
-title: 【playwright】面倒な事務作業を自動化する試み
-date: "2023-02-12T11:12:03.284Z"
+title: 【playwright】面倒な事務作業を自動化する試み Part1
+date: "2023-02-11T11:12:03.284Z"
 description: "playwrightとgoogle apps scriptを使って日々の面倒なルーティング作業を自動化しました"
 tags: ["playwright", "google apps script"]
 ---
-
 
 1. 勤怠システムに業務開始、業務終了、休憩開始、休憩終了時刻を打刻する
 
