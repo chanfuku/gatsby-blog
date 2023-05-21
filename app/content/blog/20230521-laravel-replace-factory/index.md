@@ -9,7 +9,9 @@ tags: ["PHP", "Laravel"]
 
 特に影響の可能性が高いのが、下記に記載されているファクトリの変更です。
 
-<a target="_blank" href="https://readouble.com/laravel/8.x/ja/upgrade.html#model-factories">https://readouble.com/laravel/8.x/ja/upgrade.html#model-factories</a>
+<a target="_blank" href="https://readouble.com/laravel/8.x/ja/upgrade.html#model-factories">
+https://readouble.com/laravel/8.x/ja/upgrade.html#model-factories
+</a>
 
 ドキュメントに記載されているように、`laravel/legacy-factories`をインストールすれば、Laravel7.xの書き方のままで問題ありませんが、
 
@@ -20,6 +22,8 @@ tags: ["PHP", "Laravel"]
 <a target='_blank' href='https://tech.sumzap.co.jp/entry/laravel-version-up'>
 https://tech.sumzap.co.jp/entry/laravel-version-up
 </a>
+
+<br>
 
 <a target='_blank' href='https://zenn.dev/naopusyu/articles/e3e8d010c4e245'>
 https://zenn.dev/naopusyu/articles/e3e8d010c4e245
