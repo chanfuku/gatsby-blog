@@ -49,6 +49,8 @@ Factoryのnamespaceを`Database\Factories`から`Database\Factories\Eloquent`に
 HasFactoryトレイトのfactoryメソッドは規約に基づいて、その トレイトが割り当てられているモデルに適したファクトリを決定します。具体的には、Database\Factories名前空間の中でモデル名と一致するクラス名を持ち、サフィックスがFactoryであるファクトリを探します。この規約を特定のアプリケーションやファクトリで適用しない場合は、モデルのnewFactoryメソッドを上書きし、モデルと対応するファクトリのインスタンスを直接返してください。
 ```
 
+下記の様にモデルクラスにXXXFactoryのインスタンスを返すnewFactory()という関数を定義してくださいね、ということらしい。
+
 ```php
 use Database\Factories\Eloquent\SampleFactory;
 
