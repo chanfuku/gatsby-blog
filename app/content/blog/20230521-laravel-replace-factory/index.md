@@ -43,6 +43,21 @@ Factoryのnamespaceを`Database\Factories`から`Database\Factories\Eloquent`に
 
 続いて、`composer dump-autoload`も試しましたが駄目でした。
 
+色々と調査した結果、解決方法は2つありそうです。
+
+1. ディレクトリ構成 と namespaceを合わせる
+
+`database/factories/SampleFactory.php`から、
+
+`database/factories/Eloquent/SampleFactory.php`に修正する。
+
+SampleFactoryのnamespaceも`Database\Factories\Eloquent`にします。
+
+
+2. newFactory()をモデルに定義する
+
+1が何らかの理由でダメな場合はこっちですかね。例えばfactories配下のディレクトリ構成を変えた時の影響範囲が広すぎるからやりたくない、とか。
+
 <a href="https://readouble.com/laravel/8.x/ja/database-testing.html" target="_blank">factoryについての</a>ドキュメントを改めて読み込むと、以下の文章が記載されています。
 
 ```
@@ -81,7 +96,5 @@ class SampleFactory extends Factory
     protected $model = Sample::class;
 }
 ```
-
-モデルのnamespaceをデフォルトのnamespaceから変更した場合は上記の対応が必要なようです。
 
 ちょっとしたハマりポイントでした。
