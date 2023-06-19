@@ -23,6 +23,12 @@ Nuxt等のJSフレームワーク製のWebアプリケーションに`Sign in wi
 
 ClientId(AppId or ServiceID)とRedirectURIを、事前にApple Developer Programで作成する必要がありますがそこは割愛します。
 
+- Web向けに「Appleでサインイン」を設定する
+
+<a target="_blank" href="https://developer.apple.com/jp/help/account/configure-app-capabilities/configure-sign-in-with-apple-for-the-web/">
+https://developer.apple.com/jp/help/account/configure-app-capabilities/configure-sign-in-with-apple-for-the-web/
+</a>
+
 - Apple JSについて
 
 <a target="_blank" href="https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/configuring_your_webpage_for_sign_in_with_apple">
