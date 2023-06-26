@@ -55,6 +55,7 @@ https://developer.apple.com/documentation/sign_in_with_apple/displaying_sign_in_
       AppleID.auth.init({
         clientId : {{ `'${$config.appleClientId}'` }},
         redirectURI : {{ `'${$config.appleRedirectUri}'` }},
+        scope: 'name email',
         usePopup : true
       });
     </script>
@@ -77,6 +78,7 @@ export default defineComponent({
       AppleID.auth.init({
         clientId : $config.appleClientId,
         redirectURI : $config.appleRedirectUri,
+        scope: 'name email',
         usePopup : true
       });
     }
@@ -210,6 +212,7 @@ const response: AuthAppleAuthorizedResponse = await AppleID.auth.signIn() // App
       AppleID.auth.init({
         clientId : {{ `'${$config.appleClientId}'` }},
         redirectURI : {{ `'${$config.appleRedirectUri}'` }},
+        scope: 'name email',
         usePopup : true
       });
 ```
