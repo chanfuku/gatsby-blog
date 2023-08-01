@@ -1,11 +1,11 @@
 ---
-title: 【Firebase】dotenv-webpackでを使って環境ごとにデプロイする
+title: 【Firebase】dotenv-webpackを使って環境ごとにビルド&デプロイする
 date: "2023-07-30T11:12:03.284Z"
 description: "webpackで環境ごとにbuild、そしてfirebaseにdeployしたい時のtipsです"
 tags: ["Firebase", "webpack"]
 ---
 
-Firebaseでホスティングしているアプリケーションを、localやstgなどの環境ごとに環境変数を差し替えてデプロイしたい時の対応方法です。
+Firebaseでホスティングしているアプリケーションを、localやstgなどの環境ごとに環境変数を差し替えてビルド & デプロイしたい時の対応方法です。
 
 使用したライブラリは`dotenv-webpack`です。
 
