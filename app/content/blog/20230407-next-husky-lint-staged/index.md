@@ -2,7 +2,7 @@
 title: 【Next.js】husky + lint-stagedを使ってpre-commit時にlintを実行する
 date: "2023-04-07T11:12:03.284Z"
 description: "Next.jsがReactのデファクトスタンダードだと信じているのでNext.jsで試してみました"
-tags: ["React", "Next.js"]
+tags: ["React", "Next"]
 ---
 
 ### husky
@@ -58,7 +58,7 @@ npm pkg set scripts.prepare="husky install"
 ### lint-stagedをinstallする
 
 ```bash
-npm install --save-dev lint-staged 
+npm install --save-dev lint-staged
 or
 yarn add lint-staged
 ```
