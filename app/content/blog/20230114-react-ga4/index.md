@@ -2,7 +2,7 @@
 title: 【React】react-ga4を使ったら簡単にgoogle analyticsを導入できた
 date: "2023-01-14T11:12:03.284Z"
 description: "Next.jsのアプリケーションにgoogle analyticsを導入したい"
-tags: ["React", "Next.js"]
+tags: ["React", "Next"]
 ---
 
 ### UA と GA4
