@@ -1,5 +1,5 @@
 ---
-title: 【Firebase】ソーシャルログイン と Web Push通知を作った
+title: 【Firebase】ソーシャルログイン と Web Push通知を作ってみた
 date: "2023-08-05T11:12:03.284Z"
 description: "Firebase AuthenticationとCloud Messagingを使って..."
 tags: ["Firebase"]
@@ -21,21 +21,10 @@ https://firebase.google.com/docs/cloud-messaging/js/client?hl=ja
 
 ### 結論から
 
-成果物は以下にあります。
+成果物は以下にあります。Firebase SDKを使いました。
 
-<a href="https://github.com/chanfuku/firebase-playground/tree/main/social-signin-with-messaging" tareget="_blank">
-firebase-playground/social-signin-with-messaging</a>
-
-Firebase SDKを使いました。
-
-* auth
-<a href="https://firebase.google.com/docs/auth/web/google-signin?hl=ja" tareget="_blank">
-https://firebase.google.com/docs/auth/web/google-signin?hl=ja
-</a>
-
-* cloud-messaging
-<a href="https://firebase.google.com/docs/cloud-messaging/js/client?hl=ja" tareget="_blank">
-https://firebase.google.com/docs/cloud-messaging/js/client?hl=ja
+<a href="https://github.com/chanfuku/firebase-playground/tree/main/social-signin-with-messaging" target="_blank">
+firebase-playground/social-signin-with-messaging
 </a>
 
 ### ローカル環境で起動するところまで
