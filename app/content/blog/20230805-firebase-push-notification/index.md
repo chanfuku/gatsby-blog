@@ -1,5 +1,5 @@
 ---
-title: 【Firebase】ソーシャルログイン と Web Push通知を作ってみた
+title: 【Firebase】ソーシャルログインとWebPush通知を作ってみた
 date: "2023-08-05T11:12:03.284Z"
 description: "Firebase AuthenticationとCloud Messagingを使って..."
 tags: ["Firebase"]
