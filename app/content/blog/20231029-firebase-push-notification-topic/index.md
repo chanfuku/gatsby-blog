@@ -86,22 +86,22 @@ class MyService
 
 Firebase Admin SDK for PHPのインストール方法やセットアップ方法は省略してます。
 
-Firebase のCloudMessagingを使って複数端末に同じ内容のPUSH通知を送信したいという時は、「トピック」を使うと結構簡単にできそうです。
+### トピックを使うと大量送信が出来そう
 
-特定のトピックを選択した複数のデバイスにメッセージを送信出来る機能です。
+Firebase のCloudMessagingを使って複数端末に同じ内容のPUSH通知を送信したいという時は、「トピック」を使うと結構簡単に出来ます。
 
 - トピックについて
 <a href="https://firebase.google.com/docs/cloud-messaging/js/topic-messaging?hl=ja" target="_blank">
 https://firebase.google.com/docs/cloud-messaging/js/topic-messaging?hl=ja
 </a>
 
-たとえば、地域の潮汐予測アプリのユーザーは、「潮流アラート」トピックを選択し、指定した地域が海釣りに最適な状況になったときに通知を受信することができます。スポーツアプリのユーザーは、お気に入りのチームの実況ゲームスコアの自動更新にサブスクライブできます。(以下公式ドキュメントから引用)
+たとえば、地域の潮汐予測アプリのユーザーは、「潮流アラート」トピックを選択し、指定した地域が海釣りに最適な状況になったときに通知を受信することができます。
+
+スポーツアプリのユーザーは、お気に入りのチームの実況ゲームスコアの自動更新にサブスクライブできます。(以下公式ドキュメントから引用)
 
 要するに、複数の端末に対して、トピック単位でメッセージを通知することが出来る、という便利な機能です。
 
-### クライアント側はどうする？
-
-クライアントアプリをトピックにサブスクライブします。
+### クライアントアプリをトピックにサブスクライブします。
 
 - ios(swift)
 https://firebase.google.com/docs/cloud-messaging/ios/topic-messaging?hl=ja
@@ -136,10 +136,6 @@ await FirebaseMessaging.instance.subscribeToTopic("topic");
 - Web (Javascript)
 https://firebase.google.com/docs/cloud-messaging/js/topic-messaging?hl=ja
 
-Firebsae Client SDKではなく、Firebase Admin SDKのメソッドなので、Node.jsのサーバー環境が必要です。
-
-なぜWebだけClient SDKで実装出来ないのかは分からないですが、なんかセキュリティの懸念があるのかも。
-
 ```js
 // These registration tokens come from the client FCM SDKs.
 const registrationTokens = [
@@ -161,6 +157,6 @@ getMessaging().subscribeToTopic(registrationTokens, topic)
   });
 ```
 
+Firebsae Client SDKではなく、Firebase Admin SDKのメソッドなので、Node.jsのサーバー環境が必要です。
 
-
-
+なぜWebだけClient SDKでtopicのサブスクライブを実装出来ないのかは分からないですが、なんかセキュリティの懸念があるのかも（知らんけど）
