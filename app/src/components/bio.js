@@ -44,8 +44,7 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          <strong>{author.name}</strong> {author?.summary || null}<br/>
-          For work-related requests, please contact <strong>koheiebato@gmail.com</strong>
+          {author?.summary || null}
         </p>
       )}
     </div>

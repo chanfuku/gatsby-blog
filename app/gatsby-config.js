@@ -3,9 +3,9 @@ module.exports = {
     title: `エンジニア技術ブログ`,
     author: {
       name: `Kohei Ebato`,
-      summary: `業務内外で学んだことをアウトプットしてます。ほぼほぼ単なる備忘録です。`,
+      summary: `業務内外で学んだことをアウトプットしてます。`,
     },
-    description: `業務内外で学んだことをアウトプットしてます。ほぼほぼ単なる備忘録です。`,
+    description: `業務内外で学んだことをアウトプットしてます。`,
     siteUrl: `https://ebato-tech-blog.com/`,
     social: {
       twitter: ``,
