@@ -3,10 +3,10 @@ module.exports = {
     title: `エンジニア技術ブログ`,
     author: {
       name: `Kohei Ebato`,
-      summary: ` This blog is about Vue.js, Nuxt.js, React, Next.js, Laravel, Docker, AWS...and so on.`,
+      summary: `業務内外で学んだことをアウトプットしてます。`,
     },
-    description: `This blog is about Vue.js, Nuxt.js, React, Next.js, Laravel, Docker, AWS...and so on.`,
-    siteUrl: `https://ebato-tech-blog.tk/`,
+    description: `業務内外で学んだことをアウトプットしてます。`,
+    siteUrl: `https://ebato-tech-blog.com/`,
     social: {
       twitter: ``,
     },
