@@ -7,7 +7,7 @@ tags: ["GitHub", "その他"]
 
 チームで開発しているとプルリクエストのレビューをしたり、されたりすることがあると思います。
 
-プルリクエストのレビューって後回しにすると忘れてしまって、後日レビュー依頼者からslackでremindが来て、「すみません！遅れてしまいましたがLGTMです！」
+プルリクエストのレビューって後回しにすると忘れてしまって、後日レビュー依頼者からslackでリマインドが来て、「すみません！遅れてしまいましたがLGTMです！」
 
 というやりとりが発生してしまうのがチーム開発あるあるだと思っています。
 
@@ -35,7 +35,7 @@ https://github.com/chanfuku/notify-pending-pull-requests
 
 ### コードの解説
 
-<details><summary>index.jsの詳細</summary><div>
+`index.js`
 
 ```js
 import fetch from 'node-fetch';
@@ -85,7 +85,7 @@ function isReviewerAndNotApproved(pullRequest) {
 }
 
 function formatSlackMessage(pullRequests) {
-  let message = `以下のプルリクエストが${REVIEWER_USERNAME}の承認待ちです:\n=`;
+  let message = `以下のプルリクエストが${REVIEWER_USERNAME}の承認待ちです:\n`;
 
   pullRequests.forEach(pr => {
     message += `<${pr.html_url}|${pr.title}>\n`;
@@ -120,11 +120,7 @@ function sendSlackNotification(message) {
 
 // 実行
 notifyPendingPullRequests();
-
 ```
-
-</div></details>
-
 
 処理の大まかな流れとしては、下記になります。
 
@@ -158,15 +154,13 @@ REVIEWER_USERNAME=
 
 `REVIEWER_USERNAME`はgithubのユーザー名です。
 
-設定後は、`node index.js`を実行すればslackに通知が届くはずです。
+設定後は、`npm install` と `node index.js`を実行すればslackに通知が届くはずです。
 
 ### GitHub Actionsの設定
 
-<details>
-<summary>.github/workflows/notify-pending-pull-requests.ymlの詳細</summary>
-<div>
+`.github/workflows/notify-pending-pull-requests.yml`
 
-```yml
+```yaml
 name: Notify Pending Pull Requests
 
 on:
@@ -196,14 +190,11 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           REVIEWER_USERNAME: ${{ secrets.REVIEWER_USERNAME }}
         run: node index.js
-```　
-</div>
-</details>
-
+```
 
 下記が毎朝9時AM(日本時間)で実行されるように定義している箇所です。
 
-```yml
+```yaml
 on:
   schedule:
     - cron: '0 0 * * *' # JSTで毎日午前9時に実行
@@ -215,8 +206,8 @@ secretsのキーに`GITHUB_`というprefixをつけて保存しようとする�
 
 ### 感想
 
-他にもっと簡単で効果的な問題解決方法があるかもしれませんが、一旦これでレビューし忘れがなくなると良いな。
+他にもっと簡単で効果的な問題解決方法があるかもしれません。
 
-そして今回9割はChatGPTに作ってもらいました。1割は自分で手直しする必要がありましたが、それでも相当助かりました。
+今回9割はChatGPTに作ってもらいました。1割は自分で手直しする必要がありましたが、それでも相当助かりました。
 
 ChatGPTありがとー。
