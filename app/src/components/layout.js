@@ -1,7 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import ReactGA from "react-ga4"
 
 const Layout = ({ location, title, children }) => {
+  ReactGA.initialize("G-ZX5C44846C")
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
