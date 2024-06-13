@@ -4,6 +4,8 @@ import ReactGA from "react-ga4"
 
 const Layout = ({ location, title, children }) => {
   ReactGA.initialize("G-ZX5C44846C")
+  ReactGA.send({ hitType: "pageview", page: location.pathname });
+
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
