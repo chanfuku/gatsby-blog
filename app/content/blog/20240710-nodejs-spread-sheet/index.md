@@ -9,7 +9,7 @@ tags: ["Node.js", "その他"]
 
 Google Analyticsのデータを取得してスプレッドシートに書き込む、という要望の実現方法を調査しました。
 
-大きく2つの機能を実装します。
+大きくわけて2つの機能を実装します。
 
 1. Google Analyticsからデータを取得する
 
@@ -23,23 +23,24 @@ https://github.com/chanfuku/ga4-api-nodejs-sample
 
 ### Google Analyticsからデータを取得する
 
-* Node.jsのClientを使います。
+#### Node.jsのClientを使います。
 
 <a href="https://googleapis.dev/nodejs/analytics-data/latest/index.html" target="_blank">
 https://googleapis.dev/nodejs/analytics-data/latest/index.html
 </a>
 
-* Google Analytics Data APIの公式Doc
+#### Google Analytics Data APIの公式Doc
 
 <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/rest?hl=ja" target="_blank">
 https://developers.google.com/analytics/devguides/reporting/data/v1/rest?hl=ja
 </a>
 
-* Google Analytics Data API クイックスタート
+#### Google Analytics Data API クイックスタート
 
 <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries?hl=ja" target="_blank">
 https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries?hl=ja
 </a>
+
 
 上記のGoogle Analytics Data API クイックスタートを参考に進めていきます。
 
@@ -179,4 +180,4 @@ Report result:
 { value: 'Shinagawa City', oneValue: 'value' } { value: '6', oneValue: 'value' }
 ```
 
-Google Spread Sheetに書き込む機能の実装方法については次回以降に。
+Google Spread Sheetに書き込む機能の実装方法については次回以降でー
