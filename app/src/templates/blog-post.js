@@ -9,6 +9,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const tags = post.frontmatter.tags || []
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -26,7 +27,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p>
             {post.frontmatter.date}
             <br />
-            {post.frontmatter.tags.map((tag, index) => (
+            {tags.map((tag, index) => (
               <span key={tag}>
                 <Link to={`/tags/${kebabCase(tag)}/`}>
                   {tag}
