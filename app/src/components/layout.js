@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import ReactGA from "react-ga4"
 
 const Layout = ({ location, title, children }) => {
+  console.log(location.host)
   if (location.host === "ebato-tech-blog.com") {
     ReactGA.initialize("G-ZX5C44846C")
     ReactGA.send({ hitType: "pageview", page: location.pathname });
