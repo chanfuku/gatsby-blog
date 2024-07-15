@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `エンジニア技術ブログ`,
+    title: `フリーランスWebエンジニアの技術探求ブログ`,
     author: {
       name: `Kohei Ebato`,
-      summary: `業務内外で学んだことをアウトプットしてます。`,
+      summary: `React, Vue, TypeScript, Node.js, PHP, Laravel, AWS, Firebase, Docker, GitHub Actions, etc...`,
     },
-    description: `業務内外で学んだことをアウトプットしてます。`,
+    description: `React, Vue, TypeScript, Node.js, PHP, Laravel, AWS, Firebase, Docker, GitHub Actions, etc...`,
     siteUrl: `https://ebato-tech-blog.com/`,
     social: {
       twitter: ``,
