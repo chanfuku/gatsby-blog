@@ -29,6 +29,7 @@ const BlogIndex = ({  data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title={siteTitle} />
       <Bio />
+      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
       <section className="main-content">
         <Tags data={data} />
         <Posts posts={posts} />
@@ -51,7 +52,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       skip: 0
-      limit: 8
+      limit: 10
     ) {
       totalCount
       nodes {

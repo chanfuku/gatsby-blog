@@ -16,6 +16,7 @@ const BlogPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title={siteTitle} />
       <Bio />
+      <Pagination totalCount={data.allMarkdownRemark.totalCount} currentPage={currentPage} />
       <section className="main-content">
         <Tags data={data} />
         <Posts posts={posts} />
