@@ -10,7 +10,7 @@ import Tags from "../components/tags"
 const BlogPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const currentPage = location.pathname.replace('/page/', '')
+  const currentPage = location.pathname === '/' ? 1 : location.pathname.replace('/page/', '')
 
   return (
     <Layout location={location} title={siteTitle}>
