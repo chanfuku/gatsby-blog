@@ -3,9 +3,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Pagination from "../components/pagination"
-import Posts from "../components/posts"
-import Tags from "../components/tags"
+import BlogPage from "../templates/blog-page"
 
 const BlogIndex = ({  data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,18 +23,7 @@ const BlogIndex = ({  data, location }) => {
     )
   }
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <Seo title={siteTitle} />
-      <Bio />
-      <section className="main-content">
-        <Tags data={data} />
-        <Posts posts={posts} />
-      </section>
-      <Pagination totalCount={data.allMarkdownRemark.totalCount} />
-
-    </Layout>
-  )
+ return <BlogPage data={data} location={location} />
 }
 
 export default BlogIndex
@@ -51,7 +38,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       skip: 0
-      limit: 8
+      limit: 10
     ) {
       totalCount
       nodes {
