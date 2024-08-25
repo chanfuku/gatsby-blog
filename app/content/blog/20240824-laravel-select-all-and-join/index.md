@@ -158,7 +158,10 @@ withを使えばSelect * でも問題なさそうですが、誰かがjoinを追
 
 なので、いずれにしてもselect *をしていると思わぬバグを生みかねないため、
 
-結論、<strong>Select * は危険だからやめといた方が無難</strong>というお話でした。
+特に指定すべきカラムがない場合でも`id`くらいはUsers::select('users.id as id')の様に指定しておいた方が良さそうです。
+
+以上、<strong>Select * は危険だからやめといた方が無難</strong>というお話でした。
+
 
 ### 今回の検証のために作成したgithub repo
 <a href="https://github.com/chanfuku/docker-laravel11-nginx-mysql8" target="_blank">
