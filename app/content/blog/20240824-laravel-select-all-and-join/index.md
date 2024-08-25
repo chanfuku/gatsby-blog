@@ -121,17 +121,11 @@ where
   and `user_profiles`.`user_id` is not null limit 1
 ```
 
-クエリ1はuser_id = 1のデータを取得しているので、意図した通りになっていそうでぱっと見問題なさそうです。
+クエリ1ではuser_id = 1のデータを取得していますが、クエリ2では誤ってuser_id = 2のデータを取得してしまっています。
 
-一旦置いておいて、クエリ2で`where `user_profiles`.`user_id` = 2`が指定されているので、
+この原因は、クエリ1でSELECT *を使用しているため、結果セットにusers.idとuser_profiles.idの2つのidカラムが含まれていることにあります。この場合、user_profiles.idが優先され、idとして扱われます。
 
-user_id = 1のデータを取得したつもりが、user_id = 2という別のユーザのデータを取得してしまっています。
-
-これは、クエリ1でselect * をしているため、クエリ結果にidが2つ(`users.id`, `user_profiles.id`)が存在するため、
-
-idが`user_profiles.id`の値で上書きされたことで、
-
-結果的に`$user->userProfile`で、意図せず`user_profiles.user_id` = 2のデータを取得してしまった、ということになります。
+その結果、$user->userProfileを呼び出す際に、意図しないuser_profiles.user_id = 2のデータが取得されてしまいました。
 
 このバグは下記のように２つの回避策があります。
 
