@@ -115,24 +115,27 @@ where
   and `users`.`id` = 1 limit 1
 
 -- クエリ2: userProfileを取得
-select * from `user_profiles` where `user_profiles`.`user_id` = 2 and `user_profiles`.`user_id` is not null limit 1
+select * from `user_profiles`
+where
+  `user_profiles`.`user_id` = 2
+  and `user_profiles`.`user_id` is not null limit 1
 ```
 
 クエリ1はuser_id = 1のデータを取得しているので、意図した通りになっていそうでぱっと見問題なさそうです。
 
-クエリ１に問題あるのですが、そこは一旦置いておいて、クエリ2で`where `user_profiles`.`user_id` = 2`が指定されているので、
+一旦置いておいて、クエリ2で`where `user_profiles`.`user_id` = 2`が指定されているので、
 
 user_id = 1のデータを取得したつもりが、user_id = 2という別のユーザのデータを取得してしまっています。
 
-これは、クエリ1でselect * をしているため、クエリ結果にidが2つ(`users.id`, `user_profiles.id`)が存在するが、
+これは、クエリ1でselect * をしているため、クエリ結果にidが2つ(`users.id`, `user_profiles.id`)が存在するため、
 
-`user_profiles.id`のidで上書きされたことで、
+idが`user_profiles.id`の値で上書きされたことで、
 
-結果的に意図せず`user_profiles.user_id` = 2のデータを取得してしまった、ということになります。
+結果的に`$user->userProfile`で、意図せず`user_profiles.user_id` = 2のデータを取得してしまった、ということになります。
 
-下記のように回避策は２つあります。
+このバグは下記のように２つの回避策があります。
 
-1は1回のクエリ発行で済むのに対して、2は2回発行することになるので1の方がパフォーマンス面では良さそうですが、可読性は2の方が良さそうです。
+1は1回のクエリ発行で済むのに対して、2は2回発行することになるので1の方がパフォーマンス面では良さそうですが、可読性は2の方が良さそうなので、好みになるかもしれません。
 
 1. select * をやめてカラムを指定する
 
@@ -157,7 +160,7 @@ $user = User::with([
 $address = $user->userProfile->address;
 ```
 
-withを使えばSelect * でも問題なさそうですが、誰かがjoinを追加してしまう、ということは日々の運用・改修の中でありえそうです。
+withを使えばSelect * でも問題なさそうですが、誰かがjoinを追加したらバグになってしまう、ということは日々の運用・改修の中でありえそうです。
 
 なので、いずれにしてもselect *をしていると思わぬバグを生みかねないため、
 
