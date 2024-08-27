@@ -30,9 +30,9 @@ https://github.com/chanfuku/nuxt3-typecheck-eslint
   },
 ```
 
-git commit時にvue-tscの型チェックとeslintの構文チェックが走ります。
+git commit時にvue-tscによる型チェックとeslintによる構文チェックが走ります。
 
-### vue-tscの型チェック
+### vue-tscによる型チェック
 
 ```bash
 $ git commit -m 'fix'
@@ -51,7 +51,7 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 husky - pre-commit script failed (code 2)
 ```
 
-### eslintの構文チェック
+### eslintによる構文チェック
 
 ```bash
 $ git commit -m 'fix'
