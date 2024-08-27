@@ -13,6 +13,7 @@ eslint, vue-tsc, huskyを使って、コミット時に型チェックと構文�
 https://github.com/chanfuku/nuxt3-typecheck-eslint
 </a>
 
+
 ミニマルなのでpackage.jsonに定義するフレームワークやライブラリは下記だけです。
 
 ```json
@@ -53,7 +54,7 @@ husky - pre-commit script failed (code 2)
 ### eslintの構文チェック
 
 ```bash
-git commit -m 'fix'
+$ git commit -m 'fix'
 yarn run v1.22.22
 $ vue-tsc --noEmit
 ✨  Done in 1.90s.
