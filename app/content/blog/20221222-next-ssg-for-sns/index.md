@@ -2,7 +2,7 @@
 title: 【Next.js】SSGでOGP画像やdescriptionを出し分ける
 date: "2022-12-22T11:12:03.284Z"
 description: "SSGで静的HTMLを量産し、OGP画像やdescriptionを出し分ける"
-tags: ["React", "Next", "Typscript", "AWS"]
+tags: ["React", "Next", "Typescript", "AWS"]
 ---
 
 

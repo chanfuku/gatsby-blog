@@ -2,7 +2,7 @@
 title: Vite + react + plugin-pagesを試してみた
 date: "2022-10-29T11:12:03.284Z"
 description: "Viteとはフランス語で「素早い」という意味で、より速く無駄のない開発体験を提供することを目的とした次世代のビルドツールです。"
-tags: ["React", "Vite", "Typscript"]
+tags: ["React", "Vite", "Typescript"]
 ---
 
 Viteとはフランス語で「素早い」という意味で、より速く無駄のない開発体験を提供することを目的とした次世代のビルドツール、らしいです。※公式サイトより抜粋
@@ -145,7 +145,7 @@ npm run dev -- --host 0.0.0.0 --port 8080
 docker-compose.ymlを修正したのでcontainerを再起動します。
 
 ```
-docker-compose up -d 
+docker-compose up -d
 ```
 
 これで、viteの画面が表示されました。
@@ -165,12 +165,12 @@ vite + Reactの初期状態はreact-router等の機能が入っていないた�
 ```bash
 $docker-compose exec vite /bin/sh
 /vite/sample-app # npm install -D vite-plugin-pages
-/vite/sample-app # npm install react-router react-router-dom 
+/vite/sample-app # npm install react-router react-router-dom
 ```
 
 ## vite.config.tsにvite-plugin-pagesの定義をpluginに追加する
 
-#### vite.config.ts 
+#### vite.config.ts
 ```js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
