@@ -7,7 +7,7 @@ tags: ["Laravel", "PHP"]
 
 最近業務で改めて`Select *`は危険だなと思ったのでメモしておきます。
 
-下記の様に、userテーブルとuser_profileテーブルが1対1の関係であるとします。
+下記の様に、usersテーブルとuser_profilesテーブルが1対1の関係であるとします。
 
 ```sql
 CREATE TABLE `users` (
@@ -82,7 +82,7 @@ Invoice::create([
 
 どこかのタイミングというのは、
 
-何らかのエラーによって、usersテーブルのidとuser_profilesテーブルのidがずれてしまった時です。
+運用時に手動でレコードを削除したり、なんらかのエラーが発生して正常に登録が完了されなかった、等の事情によってusersテーブルのidとuser_profilesテーブルのidがずれが発生した時です。
 
 usersテーブルとuser_profilesテーブルのidが一致している場合は上記のコードは運良くちゃんと動作するのでテストで気付かれなかったりします。
 
