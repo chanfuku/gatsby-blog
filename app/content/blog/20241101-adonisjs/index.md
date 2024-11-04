@@ -44,7 +44,7 @@ npm init adonisjs@latest {プロジェクト名} --
 
 ## 起動してみる
 
-下記のようにnpm run devで起動します。
+プロジェクト作成後、下記のようにnpm run devで起動します。
 
 ```bash
 cd {プロジェクト名}
@@ -73,11 +73,10 @@ curl http://localhost:3333
 {"hello":"world"}
 ```
 
-## Controler を作ってみる
+## Controller を作ってみる
 
-次に、下記公式Docを参考にControlelrを作成します。
+次に、下記公式Docを参考にControllerを作成します。
 
-- Controllers
 <a href="https://docs.adonisjs.com/guides/basics/controllers" target="_blank">
 https://docs.adonisjs.com/guides/basics/controllers
 </a>
@@ -96,14 +95,7 @@ controllerやvalidator等の各種生成を行えます。
 https://v5-docs.adonisjs.com/guides/ace-commandline
 </a>
 
-app/controllersに`users_controller.ts`が作成されました。
-
-```js
-// import type { HttpContext } from '@adonisjs/core/http'
-
-export default class UsersController {
-}
-```
+app/controllersに`users_controller.ts`が作成されます。
 
 中身はほぼ何もない状態なので、JSONを返すように修正します。
 
