@@ -127,6 +127,6 @@ CONNECTION名はdefaultのまま使っている場合は`Username-Password-Authe
 
 Authentication APIを無効にすることも出来るのかもしれませんが、少し調べたけどやり方が分かりませんでした。
 
-そもそも各connectionにはIdentifierという識別子があるのに、何でconnection名を指定する設計になっているのかが謎。
+そもそも各connectionにはIdentifierという識別子があるのに、なぜconnection名を指定する仕様になっているのかが謎。
 
 というお話でした。
