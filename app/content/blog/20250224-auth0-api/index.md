@@ -10,7 +10,7 @@ Auth0のユーザー情報を操作するには、下記2種類があります�
 - Management Api
 - Authentication Api
 
-デフォルトのConnection名(`Username-Password-Authentication`)を使い続けている場合は、
+デフォルトのConnection名(です。Username-Password-Authentication`)を使い続けている場合は、
 
 Authentication Apiがちょっと危険そうというお話です。
 
@@ -110,7 +110,7 @@ Auth0でアプリケーションを作るとconnectionのdefault値は`Username-
 
 ユーザーのパスワード変更メールを送信するAPIです。パスワードを変更することは出来ないですが、
 
-別ユーザーのメールアドレスさえ分かれば、このAPIを使って「あれ、なぜかパスワード変更メールが飛んできたなー」なんてイタズラが可能です。
+ユーザーのメールアドレスさえ分かれば、このAPIを使ってパスワード変更メールを飛ばすなんてイタズラが可能です。
 
 ```bash
 curl --location 'https://{yourDomain}/dbconnections/change_password' \
@@ -121,9 +121,9 @@ curl --location 'https://{yourDomain}/dbconnections/change_password' \
 }'
 ```
 
-CONNECTION名はdefaultのまま使っている場合は`Username-Password-Authentication`なので、
+CONNECTIONはdefaultのまま使っている場合は`Username-Password-Authenticationです。
 
-<strong>やはりAuth0でアプリケーションを構築する場合は新規にDatabase Connectionを作成した方が良さそうです。</strong>
+<strong>CONNECTIONの値は変更できないため、やはりAuth0でアプリケーションを構築する場合は新規にDatabase Connectionを作成した方が良さそうです。</strong>
 
 Authentication APIを無効にすることも出来るのかもしれませんが、少し調べたけどやり方が分かりませんでした。
 
