@@ -5,16 +5,14 @@ description: "デフォルトのConnection名を使うのはやめた方が良�
 tags: ["Auth0"]
 ---
 
-Auth0のユーザー情報を操作するには、下記2種類があります。
+Auth0のユーザー情報を操作する方法は下記2種類あります。
 
 - Management Api
 - Authentication Api
 
-デフォルトのConnection名(です。Username-Password-Authentication`)を使い続けている場合は、
+デフォルトのConnection名(`Username-Password-Authentication`)を使い続けている場合は、Authentication Apiがちょっと危険そうというお話です。
 
-Authentication Apiがちょっと危険そうというお話です。
-
-まずは、Management Apiの使い方を記載していきます。
+まずはManagement Apiの使い方を記載していきます。
 
 ## Access Token取得API
 
@@ -72,7 +70,7 @@ curl --location 'https://{yourDomain}/api/v2/users' \
 
 ### POST /dbconnections/signup
 
-これが危険な香りがするAuthentication Apiその1です。
+これが危険な香りがするAPIその1です。Authentication ApiのSingup Api(ユーザー作成API)です。
 
 <a href="https://auth0.com/docs/api/authentication#signup" tareget="_blank">Signup Api</a>
 
@@ -121,7 +119,7 @@ curl --location 'https://{yourDomain}/dbconnections/change_password' \
 }'
 ```
 
-CONNECTIONはdefaultのまま使っている場合は`Username-Password-Authenticationです。
+CONNECTIONはdefaultのまま使っている場合は`Username-Password-Authentication`です。
 
 <strong>CONNECTIONの値は変更できないため、やはりAuth0でアプリケーションを構築する場合は新規にDatabase Connectionを作成した方が良さそうです。</strong>
 
