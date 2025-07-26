@@ -40,7 +40,7 @@ cd pusher-sample
 ```
 
 ### 2. Pusherアプリケーションを作成する
-Pusherダッシュボード（https://dashboard.pusher.com/）で、Pusherアプリケーションを作成します。pusherサービスの管理・監視・デバッグを行うためのWebベースの管理コンソールで、PusherのApp ID, Key, Secret, Clusterを取得します。
+Pusherダッシュボード（`https://dashboard.pusher.com/`）で、Pusherアプリケーションを作成し、PuserのApp ID, Key, Secret, Clusterを取得します。
 
 ### 3. バックエンドのセットアップ
 
@@ -71,7 +71,9 @@ cp .env.example .env
 
 ## 機能紹介
 
-シンプルなチャットアプリケーションです。
+`http://localhost:8080/`でチャット画面が表示されます。
+
+めちゃくちゃシンプルなチャットアプリケーションです。
 
 - メッセージを投稿すると、接続しているすべてのクライアントにリアルタイムでメッセージが配信されます。
 - バックエンドのAPI (`http://localhost:3000/pusher/trigger/`) が叩かれると、Pusher を通じてフロントエンドにイベントが送信されます。
@@ -80,4 +82,4 @@ cp .env.example .env
 
 ## まとめ
 
-Pusher-JS を使うことで、比較的簡単にリアルタイム機能を実装できることがわかりました。チャット以外にもリアルタイムで更新される情報（ex. 株価、天気予報）等にも使えます。
+Pusher-JS を使うことで、比較的簡単にリアルタイム機能を実装できることがわかりました。チャット以外にもリアルタイムで更新される情報（ex. 株価、天気予報）等の機能にも使えます。
