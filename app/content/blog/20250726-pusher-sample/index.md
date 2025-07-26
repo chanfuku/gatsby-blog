@@ -9,7 +9,7 @@ tags: ["PusherJS", "Vue", "Express"]
 
 ## はじめに
 
-今回は、[Pusher-JS](https://pusher.com/docs/channels/getting_started/javascript/) を使って、Webアプリケーションにリアルタイム通知機能を実装するサンプルプロジェクトを作成してみました。
+今回は、[Pusher-JS](https://github.com/pusher/pusher-js) を使って、Webアプリケーションにリアルタイム通知機能を実装するサンプルプロジェクトを作成してみました。
 
 ![img1](./img1.png)
 
@@ -40,7 +40,7 @@ cd pusher-sample
 ```
 
 ### 2. Pusherアプリケーションを作成する
-Pusherダッシュボード（`https://dashboard.pusher.com/`）で、Pusherアプリケーションを作成し、PuserのApp ID, Key, Secret, Clusterを取得します。
+Pusherダッシュボード（`https://dashboard.pusher.com/`）で、Pusherアプリケーションを作成し、App ID, Key, Secret, Clusterを取得します。
 
 ### 3. バックエンドのセットアップ
 
