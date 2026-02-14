@@ -5,7 +5,7 @@ description: "CursorやClaude Codeで並列実装する前に押さえたい、g
 tags: ["Git", "AIエージェント"]
 ---
 
-# Cursor/Claude Codeで並列実装するなら、まずgit worktreeを使う
+## Cursor/Claude Codeで並列実装するなら、まずgit worktreeを使う
 
 CursorやClaude CodeなどのAIエージェントを使って並列実装を進めるなら、`git worktree` はほぼ必須だと感じました。
 
@@ -19,11 +19,14 @@ git worktree add -b <新ブランチ名> <パス>
 ```
 
 実際使う場合はこんな感じ
-```
+```bash
+# worktreeを2つ作成
 git worktree add -b feature/git-worktree-1 ../gatsby-blog-feature-git-worktree-1
 git worktree add -b feature/git-worktree-2 ../gatsby-blog-feature-git-worktree-2
-cd ../gatsby-blog-feature-git-worktree-1 ←feature/git-worktree-1をcheckoutした状態になる
-cd ../gatsby-blog-feature-git-worktree-2 ←feature/git-worktree-2をcheckoutした状態になる
+
+# worktreeに移動するとブランチをチェックアウトした状態になる
+cd ../gatsby-blog-feature-git-worktree-1
+cd ../gatsby-blog-feature-git-worktree-2
 ```
 
 ## 現在のworktreeをリスト表示
