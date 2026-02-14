@@ -42,6 +42,7 @@ git worktree list --porcelain
 ```
 
 ## worktreeを削除
+フォルダをrm -rfで手動削除すると残骸が残るので、その場合は`git worktree prune`を実行すると綺麗になる。
 
 ```bash
 git worktree remove <パス>
@@ -51,6 +52,7 @@ git worktree remove <パス>
 
 - `node_modules` や `dist` など `.gitignore` 管理のファイルはコピーされないので、worktree追加後に個別で環境構築が必要。
 - worktreeを切り替える専用コマンドはなく、実態としてはディレクトリ移動するだけ。シンプルで直感的。
+- worktreeを切り替えた状態で、他のworktreeで使用中のブランチをチェックアウトしようとすると、`xxx is already used by worktree` エラーになる。要は、同じブランチを複数のworktreeでチェックアウトできない。
 - 複数プロジェクトでworktreeを使うなら、worktree名に `<プロジェクト名>` のprefixを付けるほうが混乱しにくい。
 - もしくは、プロジェクトの上位にworktree専用の親ディレクトリを作る運用もわかりやすい。
 
@@ -62,4 +64,4 @@ git worktree remove <パス>
 │   ├── feature-zzz       ← worktree
 ```
 
-- なぜか何回も `worktree` を `workspace` と打ち間違えやすい。
+- どうでもいいが、なぜか何回も `worktree` を `workspace` と打ち間違えてしまう。
