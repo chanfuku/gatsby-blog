@@ -7,7 +7,7 @@ tags: ["Git", "AIエージェント"]
 
 ## Cursor/Claude Codeで並列実装するなら、まずgit worktreeを使う
 
-CursorやClaude CodeなどのAIエージェントを使って並列実装を進めるなら、`git worktree` はほぼ必須だと感じました。
+CursorやClaude CodeなどのAIエージェントを使って並列実装を進めるなら、`git worktree` はほぼ必須だと感じました。※Claude CodeのAgent Teamsを使う場合はworktree必要ないかも
 
 実際に触って学んだことを、忘れないうちにメモしておきます。
 
