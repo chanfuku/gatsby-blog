@@ -7,7 +7,7 @@ tags: ["Postgresql", "TypeORM", "Typescript"]
 
 ユーザー氏名を曖昧検索する機能を作るとき、検索欄では「やまだ」、DB には「ヤマダ」…みたいに文字の揺れがあるとヒットしません。
 
-会社名検索では既に `TRANSLATE` で正規化していたので、氏名も同じやり方にしました。`users` に `translate_full_name` という生成列を足して、検索時は入力文字列も同じルールで変換してから、このカラムに `ILIKE` で当てます。
+サンプルとして、`users` テーブルに `translate_full_name` という生成列を足して、検索時は入力文字列も同じルールで変換してから、このカラムに `ILIKE` で検索をかけます。
 
 ## マイグレーション
 
@@ -55,7 +55,7 @@ export class AddTranslateFullName1730000000000 implements MigrationInterface {
 
 ### 正規化で何が揃うか
 
-会社名検索と同じ置換表です。だいたい次の揺れが揃います。
+だいたい次の揺れが揃います。
 
 - ひらがな → カタカナ
 - 全角英数字 → 半角
@@ -73,7 +73,7 @@ export class AddTranslateFullName1730000000000 implements MigrationInterface {
 
 DB 側は `translate_full_name` に正規化済みの値が入っているので、検索キーワードだけ同じ `TRANSLATE` をかけて、`translate_full_name` に `ILIKE` で部分一致させます。
 
-部分一致は `LIKE` ではなく `ILIKE` にしています。会社名検索と揃えたのと、`TRANSLATE` では半角英字の大文字小文字は揃わないので（`Yamada` と `yamada` など）、ローマ字が混ざる氏名用です。日本語だけなら `LIKE` でもだいたい同じですが、英字が入る可能性があるなら `ILIKE` の方が無難かな、という感じです。
+部分一致は `LIKE` ではなく `ILIKE` にしています。`TRANSLATE` では半角英字の大文字小文字は揃わないので（`Yamada` と `yamada` など）、ローマ字が混ざる氏名用です。日本語だけなら `LIKE` でもだいたい同じですが、英字が入る可能性があるなら `ILIKE` の方が無難かな、という感じです。
 
 ### SQL
 
